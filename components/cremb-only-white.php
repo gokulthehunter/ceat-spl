@@ -1,4 +1,4 @@
-<div class="page_head white-bg">
+<div class="page_head white-bg pt-4 pb-3">
     <div class="container">
         <div class="row">
             <div class="col-12">

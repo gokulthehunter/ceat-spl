@@ -1,3 +1,118 @@
 .product_listing{position: relative;
     &:after{z-index: -1;position: absolute;top:0;left:0;width:100%;height:200px;background:#F4F6F8;content:'';}
 }
+// product Details page[start]
+.product_details{
+    &_imgs{padding-bottom:50px;}
+    &_desc{
+        &--title{font-size: 28px;font-weight: 600;}
+        &--copy{font-size: 16px;font-weight: 400;color: #2E2E2E;padding-bottom:10px;}
+        &_form{
+            &--radios{
+                [type="radio"]:checked,[type="radio"]:not(:checked) {position: absolute;left: -9999px;}
+
+                [type="radio"]:checked + label,
+                [type="radio"]:not(:checked) + label{position: relative;padding-left: 28px;cursor: pointer;line-height: 20px;display: inline-block;color: #898989;font-size:14px;}
+                
+                [type="radio"]:checked + label:before,
+                [type="radio"]:not(:checked) + label:before {content: '';position: absolute;left: 0;top: 0;width: 21px;height: 21px;border: 1px solid #E8E8E8;border-radius: 100%;background: #F4F6F8;}
+                
+                [type="radio"]:checked + label:after,
+                [type="radio"]:not(:checked) + label:after {content: '';width:21px;height: 21px;background: url(#{$img_url}tick.svg)no-repeat center center / contain;position: absolute;top: 0px;left: 0px;border-radius: 100%;transition: all 0.2s ease;}
+                
+                [type="radio"]:not(:checked) + label:after {opacity: 0;transform: scale(0);}
+                
+                [type="radio"]:checked + label{color: #000;}
+                [type="radio"]:checked + label:after {opacity: 1;transform: scale(1);}
+            }
+            // .c_btn--inner{min-width:300px;}
+            &--spl{color: $color_sub;
+                span{display: inline-block;vertical-align: middle;font-weight: 600;}
+            }
+        }
+        &--scrollnote{color: #000;font-size:14px;
+            svg path{@extend %transition;margin-left:5px;}
+            &:hover{color:$color_main;
+                svg path{fill:$color_main;}
+            }
+        }
+    }
+}
+// product Details page[end]
+// produt benefits[start]
+.prod_secs{padding: 50px 0;
+    &-lefted{
+        .prod_secs_copy{@include media-sm-max(){padding-right:30px;}}
+    }
+    &-righted{
+        .prod_secs_copy{@include media-sm-max(){padding-left:30px;}}
+    }
+    &_copy{padding:40px 0;
+        &--title{font-size:18px;font-weight: 600;margin:0;}
+        &--text{font-size: 14px;margin:0;color:#444;}
+        
+    }
+    &--img{max-width: 180px;margin:0 auto;position:relative;
+        .line{position: absolute;width:1px;background: #E2E2E2;height:80%;
+            &.to{
+                &-e{top: 50%;left: 105%;width: 80px;height: 1px;
+                    @include media-md-max(){width: 50px;}
+                }
+                &-w{top: 50%;right: 105%;width: 80px;height: 1px;
+                    @include media-md-max(){width: 50px;}
+                }
+                &-ne{top: -21px;left: 126%;transform: rotate(50deg);width: 1px;height: 115px;
+                    @include media-md-max(){top: -9px;left: 116%;height: 77px;}
+                }
+                &-nw{top: -21px;right: 126%;transform: rotate(-50deg);width: 1px;height: 115px;
+                    @include media-md-max(){top: -9px;right: 116%;height: 77px;}
+                }
+                &-se{bottom: -21px;left: 126%;transform: rotate(-50deg);width: 1px;height: 115px;
+                    @include media-md-max(){bottom: -9px;left: 116%;height: 77px;}
+                }
+                &-sw{bottom: -21px;right: 126%;transform: rotate(50deg);width: 1px;height: 115px;
+                    @include media-md-max(){bottom: -9px;right: 116%;height: 77px;}
+                }
+            }
+        }
+    }
+}
+// produt benefits[end]
+// tyre table[start]
+.tyre_table{
+    &_select{
+        &--each{display: inline-block;vertical-align:middle;
+            .nice-select{min-width: 160px;
+                // .list:hover .option:not(:hover){background:#F4F6F8;color:$color_main;}
+                .current{font-weight: bold;}
+                .list{width: 475px;white-space:pre-wrap;padding:10px;
+                    .option{display: inline-block;vertical-align: middle;margin:0 3px;background:#F4F6F8;border-radius:20px;padding:10px 20px;min-height:auto;color:$color_main;font-size:13px;line-height:13px;font-weight:600;@extend %transition;
+                        &:first-child{display: none;}
+                        &.selected,&:hover{background:$color_main;color:#fff;}
+                    }
+                }
+                &.open{border-color:$color_main;
+                    .current{color:$color_main;}
+                    &:after{border-color:$color_main;}
+                }
+            }
+        }
+    }
+    table{width:100%;
+        th{font-weight: 600;font-size:14px;padding:5px;line-height:14px;
+            p{margin:0;font-size:12px;color:#959595;}
+            &.by-split{padding:5px 0;
+                div{border-top:solid 1px #dee2e6;padding-top:5px;margin-top:5px;}
+            }
+            .small-text{font-size:12px;}
+        }
+        td{font-size:13px;padding: 50px 10px;}
+    }
+    &--expand{background:#F4F6F8;text-align:center;display:block;@extend %transition;border:solid 1px #dee2e6;border-left:none;
+        svg path{@extend %transition;}
+        &:hover{background:$color_main;
+            svg path{fill:#fff;}
+        }
+    }
+}
+// tyre table[end]

@@ -10,7 +10,7 @@ header{height:125px;
 .header{transition: all 300ms ease;position:fixed;left:0;top:0;height:125px;width:100%;z-index:100;
     &.menu-open{transform: translateX(-270px);}
     &_top{background: #fff;padding:8px 0;position:relative;z-index:1;
-        &--logo{display: block;max-width: 100px;
+        &--logo{display: block;max-width: 100px;opacity:0;
         }
         &_nav{
             &_ul{margin: 0;padding:0;
