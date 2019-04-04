@@ -1,0 +1,11 @@
+.page_head{background: #F4F6F8;padding:50px 0;
+    &.white-bg{background: #fff;}
+    &_cremb{
+        &--link{font-weight: lighter;color:#000;margin-right:20px;font-size:14px;@extend %transition;position: relative;
+            &:after{content:'';background:url(#{$img_url}arrow-right.svg)no-repeat center center / contain;width: 8px;height:8px;position:absolute;right:-15px;top:8px;}
+            &:last-child:after{display: none;}
+            &:hover{color: $color_main;}
+        }
+    }
+    &--title{font-weight: 600;color:#000;font-size: 28px;padding-top:10px;margin-bottom:0;}
+}

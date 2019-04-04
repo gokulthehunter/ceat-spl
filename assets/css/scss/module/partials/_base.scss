@@ -1,0 +1,32 @@
+*{box-sizing: border-box}
+body{padding:0;margin: 0;font-family: $font_main;overflow-x:hidden;}
+a{text-decoration: none;
+    &:hover{text-decoration: none;}
+}
+li{list-style: none;}
+button{outline: none;box-shadow: none;background: none;border:none;
+    &:focus,&:active{outline: none;}
+}
+.img{
+    &-fluid{max-width: 100%;}
+}
+// nice select adjust
+.nice-select{
+    .current,.list li{
+        img{display: none;}
+    }
+    &:after{border-width:1px;height: 7px;width:7px;}
+}
+.val{
+    &-msg{color:#fff;font-size:12px;position: absolute;bottom:-18px;right:5px;display: none;text-align:right;}
+    &-error{}
+}
+
+// slide controls
+.slider{
+    &_controls{position: absolute;left:50px;background:#fff;padding:15px 40px;
+        box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.48);
+        &_dots{}
+        &_arrows{}
+    }
+}

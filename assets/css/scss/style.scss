@@ -1,0 +1,30 @@
+// :::::::  libs ::::::: 
+@import 'module/libs/bootstrap'; //v4.3.1
+@import 'module/libs/nice-select'; //v1.0
+@import 'module/libs/swiper.4.5.0'; //v4.5.0
+
+// :::::::  partials ::::::: 
+@import 'module/partials/vars';
+@import 'module/partials/breakpoints';
+@import 'module/partials/keyframes';
+@import 'module/partials/mixins';
+@import 'module/partials/extends';
+@import 'module/partials/fonts';
+@import 'module/partials/base';
+@import 'module/partials/common'; 
+
+// ::::::: components ::::::: 
+@import 'module/components/shared/header';
+@import 'module/components/shared/footer';
+@import 'module/components/shared/common-loader';
+// other comps
+@import 'module/components/page-header-and-cremb';
+// product page related
+@import 'module/components/product-filter';
+@import 'module/components/product-list';
+
+
+// :::::::  pages ::::::: 
+@import 'module/pages/index';
+@import 'module/pages/products';
+

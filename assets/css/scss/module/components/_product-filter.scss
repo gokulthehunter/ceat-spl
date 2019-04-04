@@ -1,0 +1,18 @@
+.product_filter{background: #fff;padding:20px 25px;border:solid 1px #F4F6F8;border-radius:5px;margin-bottom:25px;
+    &_head{border-bottom:solid 1px #F4F6F8;display: inline-block;width:100%;padding:15px 0 25px;
+        &--title{font-size:18px;font-weight:600;float:left;margin:4px 0;}
+        &--btn{color:$color_main;background: #F4F6F8;padding:6px 25px;float:right;border-radius:15px;@extend %transition;font-weight:600;font-size:13px;
+            &:hover{color:#fff;background: $color_main;}
+        }
+        &.downside{border-top:solid 1px #F4F6F8;border-bottom:none;padding:20px 0 0}
+    }
+    &_each{padding-bottom:15px;display: inline-block;width: 100%;
+        label,p{display: block;color:#989898;font-size: 14px;}
+        .nice-select{width:100%;border-color: #DEE3E8;
+            .current{color: #000;}
+            .list{width: 100%;}
+            &:after{border-color: #000;}
+        }
+        p{margin:0;}
+    }
+}
