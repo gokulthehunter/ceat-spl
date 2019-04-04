@@ -20,5 +20,6 @@ please code as component, add them into page avoid writing things directly to pa
 Libraries and Dependencies
 ----------
 jQuery 3.3.1 [JS]
-slick.js 1.8.1 [js/css | optional]
-Bootstrap 4.1.3 [css only | optional]
+niceselect.js 1.0.0 [js/css]
+slick.js 4.5.0 [js/css | optional]
+Bootstrap 4.3.1 [css only | optional]
