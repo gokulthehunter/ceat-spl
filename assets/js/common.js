@@ -106,25 +106,44 @@ function docClicks(){
     }
   })
 };
+
 // form validations and actions[start]
+// email validator 
+function ValidateEmail(mail) {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+    return true
+  }
+  return false
+};
+// phone validator
+function phoneCheck(str) {
+  if (/^(1\s|1|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/.test(str)) {
+    return true
+  }
+  return false
+};
+// numeric only input
+function numericOnlyInput() {
+  $(".numeric-only").keydown(function (e) {
+    // Allow: backspace, delete, tab, escape, enter and .
+    if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
+      // Allow: Ctrl+A, Command+A
+      (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+      // Allow: home, end, left, right, down, up
+      (e.keyCode >= 35 && e.keyCode <= 40)) {
+      // let it happen, don't do anything
+      return;
+    }
+    // Ensure that it is a number and stop the keypress
+    if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+      e.preventDefault();
+    }
+  });
+};
 function formActions(){
-  // email validator 
-  function ValidateEmail(mail) {
-    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
-      return true
-    }
-    return false
-  };
-  // phone validator
-  function phoneCheck(str) {
-    if (/^(1\s|1|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/.test(str)) {
-      return true
-    }
-    return false
-  };
   // common keyup clear
-  $(".input-holder input").on("keyup", function () {
-    $(this).next(".error-msg").hide();
+  $(".input-holder input, .c_field--input").on("keyup", function () {
+    $(this).next(".error-msg,.c_field--error").hide();
   });
   // footer subscribe validator
   $(document).on("click","#footer-subscribe",function(){

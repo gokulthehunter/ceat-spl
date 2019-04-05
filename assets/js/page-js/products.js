@@ -23,8 +23,39 @@ function productSllider(){
         }
     })
 };
-
+function productPageForms(){
+    function customerRequest(prefix){
+        var _sel= {};
+        _sel = {
+            checkVal: $("input:radio[name ='" + prefix +"-radio']:checked"),
+            cCode: $("#" + prefix +"-c-code"),
+            phone: $("#" + prefix +"-mob")
+        }
+        if (_sel.phone.val() == '') {
+            _sel.phone.next(".c_field--error").show().text("Please enter your mobile number");
+        } else if (!phoneCheck(_sel.phone.val())) {
+            _sel.phone.next(".c_field--error").show().text("Please enter a valid mobile number");
+        } else {
+            var _data = {
+                option: _sel.checkVal.val(),
+                cCode: _sel.cCode.val(),
+                phone: _sel.phone.val()
+            }
+            formVals.prodAreaRequestForm = _data;
+            console.log(prefix+" customer form", formVals.prodAreaRequestForm);
+            // clear
+            _sel.phone.val('');
+        }
+    };
+    $(document).on("click","#prod-area-submit",function(){
+        customerRequest("prod-area");
+    });
+    $(document).on("click", "#cus-req-submit", function () {
+        customerRequest("cus-req");
+    });
+}
 jQuery(document).ready(function(){
     filterActions();
     productSllider();
+    productPageForms();
 })

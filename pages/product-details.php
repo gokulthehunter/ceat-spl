@@ -64,27 +64,27 @@
                                 <form action="javascript:void(0)" class="product_details_desc_form">
                                     <div class="product_details_desc_form--radios d-flex justify-content-between py-2">
                                         <p>
-                                            <input type="radio" id="test1" name="radio-group" checked>
+                                            <input value="1" type="radio" id="test1" name="prod-area-radio" checked>
                                             <label for="test1">Cal me back</label>
                                         </p>
                                         <p>
-                                            <input type="radio" id="test2" name="radio-group">
+                                            <input value="2" type="radio" id="test2" name="prod-area-radio">
                                             <label for="test2">Get a quote</label>
                                         </p>
                                         <p>
-                                            <input type="radio" id="test3" name="radio-group">
+                                            <input value="3" type="radio" id="test3" name="prod-area-radio">
                                             <label for="test3">download data sheet</label>
                                         </p>
                                     </div>
                                     <div class="c_field with_country">
-                                        <select class="country-code-changer">
+                                        <select class="country-code-changer" id="prod-area-c-code">
                                             <option selected value="+91" data-image="<?php echo $imagesurl ?>flags/in.svg">India <span>+91</span></option>
                                             <option value="+22" data-image="<?php echo $imagesurl ?>flags/it.svg">Italy +22</option>
                                             <option value="+23" data-image="<?php echo $imagesurl ?>flags/jp.svg">Japan +22</option>
                                             <option value="+243" data-image="<?php echo $imagesurl ?>flags/sa.svg">Saudi Arabia +24</option>
                                         </select>
-                                        <input type="text" class="c_field--input" placeholder="Enter your Mobile Number">
-                                        <p class="c_field--error">Please enter valid Mobile Number</p>
+                                        <input type="text" id="prod-area-mob" class="c_field--input numeric-only" placeholder="Enter your Mobile Number">
+                                        <p class="c_field--error">This field is required</p>
                                     </div>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="product_details_desc_form--spl">
@@ -92,7 +92,7 @@
                                             <span>7 Year Warranty</span>
                                         </div>
                                         <div class="c_btn text-right">
-                                            <a href="javascript:void(0)" class="c_btn--inner">Submit</a>
+                                            <a href="javascript:void(0)" id="prod-area-submit" class="c_btn--inner">Submit</a>
                                         </div>
                                     </div>
                                 </form>

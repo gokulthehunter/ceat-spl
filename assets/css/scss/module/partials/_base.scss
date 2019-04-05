@@ -31,7 +31,7 @@ button{outline: none;box-shadow: none;background: none;border:none;
     }
     &_field{position: relative;padding-bottom:15px;
         &--input{padding:15px 20px;font-size:14px;width:100%;border:solid 1px #DEE3E8;outline:none;border-radius:6px;}
-        &--error{color:$color_sub;font-size:12px;right:6px;bottom:2px;position: absolute;position: absolute;margin:0;display: none;}
+        &--error{color:$color_sub;font-size:12px;right:6px;bottom:14px;position: absolute;margin:0;display: none}
         &.with_country{
             .c_field{
                 &--input{padding-left:115px;}
