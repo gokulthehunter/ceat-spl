@@ -80,11 +80,11 @@ function navAction() {
 
     if (direction === 1) {
       // scroll down
-      $("header").addClass("state-down");
+      $("header,.header").addClass("state-down");
     }
     if (direction === 0) {
       // scroll up
-      $("header").removeClass("state-down");
+      $("header,.header").removeClass("state-down");
     }
   });
   // header scroll action[end]
@@ -181,7 +181,23 @@ function selectfileCustom(){
   $(".country-selector").on("change",function(){
       var _changeData = $(this).val();
       _seltext.text(_changeData.slice(0,3))
+  });
+
+  // country code changer[start]
+  $(".country-code-changer").each(function(){
+    var _this = $(this),
+        _cCode = _this.next(".nice-select").find(".current"),
+        _cCodeData = _cCode.text(),
+        _cCodeDataSplitVal_1 = _cCodeData.split(' ')[0],
+        _cCodeDataSplitVal_2 = _cCodeData.split(' ')[1];
+    _cCode.html(_cCodeDataSplitVal_1.slice(0, 3) + '<span class="c-code">' + _cCodeDataSplitVal_2+'</span>');
+    _this.on("change",function(){
+      var _changeData = $(this).val(),
+          _changeText = $(this).next(".nice-select").find(".option.selected").text();
+      _cCode.html(_changeText.slice(0, 3) + '<span class="c-code">'+_changeData+'</span>');
+    })
   })
+  // country code changer[end]
 }; 
 // select box customization[end]
 // numeric only input[start]

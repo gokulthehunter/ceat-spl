@@ -1,0 +1,12 @@
+.cutomer-req-form{
+    .product_details_desc_form{
+        &--radios{
+            p{margin:0;}
+        }
+        .c_field--input,.c_btn--inner{background: none;}
+        .c_btn--inner{
+            &:hover{background: $color_main;}
+        }
+    }
+    @include media-xs-max(){padding:0 15px;}
+}

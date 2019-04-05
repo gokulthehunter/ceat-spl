@@ -32,12 +32,27 @@ button{outline: none;box-shadow: none;background: none;border:none;
     &_field{position: relative;padding-bottom:15px;
         &--input{padding:15px 20px;font-size:14px;width:100%;border:solid 1px #DEE3E8;outline:none;border-radius:6px;}
         &--error{color:$color_sub;font-size:12px;right:6px;bottom:2px;position: absolute;position: absolute;margin:0;display: none;}
-    }
-    &_btn{
-        &--inner{color:$color_main;padding:13px 50px;border-radius: 6px;border:solid 1px $color_main;@extend %transition;min-width:200px;text-align:center;background:#fff;display: inline-block;box-shadow:none;
-            &:hover{color: #fff;background: $color_main;}
+        &.with_country{
+            .c_field{
+                &--input{padding-left:115px;}
+            }
+            .nice-select{border:none;border-radius:0;border-right:solid 1px #DEE3E8;position:absolute;top:11px;padding:0 25px 0 10px;min-width:100px;background:none;left:1px;height:30px;line-height:30px;
+                .current{text-transform: uppercase;color:#000;font-weight:600;min-width:62px;
+                    .c-code{font-weight:600;color:#999;padding-left:5px;}
+                }
+                .list li{
+                    img{display: inline-block;width: 18px;vertical-align: middle;margin-right:8px;}
+                }
+            }
         }
     }
+    &_btn{
+        &--inner{color:$color_main;padding:15px 50px;border-radius: 6px;border:solid 1px $color_main;@extend %transition;min-width:200px;text-align:center;background:#fff;display: inline-block;box-shadow:none;text-transform:uppercase;font-weight:600;font-size:14px;
+            &:hover{color: #fff;background: $color_main;}
+            @include media-sm-max(){min-width:100px;}
+        }
+    }
+    &_splitline{background: #EFF2F3;width:100%;height:1px;}
 }
 
 // slide controls

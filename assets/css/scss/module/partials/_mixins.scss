@@ -1,0 +1,20 @@
+@mixin radio-input(){
+    [type="radio"]:checked,[type="radio"]:not(:checked) {position: absolute;left: -9999px;}
+    [type="radio"]:checked + label,
+    [type="radio"]:not(:checked) + label{position: relative;padding-left: 28px;cursor: pointer;line-height: 20px;display: inline-block;color: #898989;font-size:14px;}
+    
+    [type="radio"]:checked + label:before,
+    [type="radio"]:not(:checked) + label:before {content: '';position: absolute;left: 0;top: 0;width: 21px;height: 21px;border: 1px solid #E8E8E8;border-radius: 100%;background: #F4F6F8;
+        @include media-xs-max(){top:4px;}
+    }
+    
+    [type="radio"]:checked + label:after,
+    [type="radio"]:not(:checked) + label:after {content: '';width:21px;height: 21px;background: url(#{$img_url}tick.svg)no-repeat center center / contain;position: absolute;top: 0px;left: 0px;border-radius: 100%;transition: all 0.2s ease;
+        @include media-xs-max(){top:4px;}
+    }
+    
+    [type="radio"]:not(:checked) + label:after {opacity: 0;transform: scale(0);}
+    
+    [type="radio"]:checked + label{color: #000;}
+    [type="radio"]:checked + label:after {opacity: 1;transform: scale(1);}
+}

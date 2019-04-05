@@ -76,7 +76,13 @@
                                             <label for="test3">download data sheet</label>
                                         </p>
                                     </div>
-                                    <div class="c_field">
+                                    <div class="c_field with_country">
+                                        <select class="country-code-changer">
+                                            <option selected value="+91" data-image="<?php echo $imagesurl ?>flags/in.svg">India <span>+91</span></option>
+                                            <option value="+22" data-image="<?php echo $imagesurl ?>flags/it.svg">Italy +22</option>
+                                            <option value="+23" data-image="<?php echo $imagesurl ?>flags/jp.svg">Japan +22</option>
+                                            <option value="+243" data-image="<?php echo $imagesurl ?>flags/sa.svg">Saudi Arabia +24</option>
+                                        </select>
                                         <input type="text" class="c_field--input" placeholder="Enter your Mobile Number">
                                         <p class="c_field--error">Please enter valid Mobile Number</p>
                                     </div>
@@ -90,7 +96,7 @@
                                         </div>
                                     </div>
                                 </form>
-                                <div class="pt-5">
+                                <div class="pt-md-5 pt-3 pb-4 pb-md-0 text-center text-md-left">
                                     <a href="javascript:void(0)" class="product_details_desc--scrollnote">Scroll down for more details
                                         <svg width="9.466" height="5.301" viewBox="0 0 9.466 5.301">
                                             <g transform="translate(-22.938 40.145) rotate(-90)">
@@ -120,7 +126,7 @@
                 </div>
 
                 <div class="row align-items-center">
-                    <div class="col-md-4 text-right prod_secs-lefted">
+                    <div class="col-md-4 text-md-right prod_secs-lefted">
                         <div class="prod_secs_copy">
                             <h4 class="prod_secs_copy--title">Tilted Lug Up</h4>
                             <p class="prod_secs_copy--text">Lesser vibration and noise</p>
@@ -130,11 +136,11 @@
                             <p class="prod_secs_copy--text">Better Self Cleaning</p>
                         </div>
                         <div class="prod_secs_copy">
-                            <h4 class="prod_secs_copy--title">Higher Angle<br/>& Lug Overlap at Centre</h4>
+                            <h4 class="prod_secs_copy--title">Higher Angle <br class="d-none d-md-block"/>& Lug Overlap at Centre</h4>
                             <p class="prod_secs_copy--text">better Roadability</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 d-none d-md-block">
                         <div class="prod_secs--img">
                             <img src="<?php echo $imagesurl ?>products/featured/prod-1.png" class="img-fluid" alt="Product">
                             <!-- <div class="line to-n"></div> -->
@@ -149,7 +155,7 @@
                             <div class="line to-sw"></div>
                         </div>
                     </div>
-                    <div class="col-md-4 text-left prod_secs-righted">
+                    <div class="col-md-4 text-md-left prod_secs-righted">
                         <div class="prod_secs_copy">
                             <h4 class="prod_secs_copy--title">Rounder Sholuder</h4>
                             <p class="prod_secs_copy--text">Lessor damage to Sooil and Crop</p>
@@ -164,11 +170,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="py-2 d-block d-sm-none"></div>
             </div>
         </section>
         <!-- product features[end] -->
         <!-- tyre table[start] -->
         <section class="tyre_table py-5">
+            <div class="py-2"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -261,9 +269,25 @@
                         </a>
                     </div>
                 </div>
+                <!-- quote spl form -->
+                <div class="py-2"></div>
+                <div class="row">
+                    <div class="col-md-12 mt-5">
+                        <?php include('../components/cutomer-request-form.php') ?>
+                    </div>
+                </div>
+                <!-- quote spl form -->
             </div>
+            <div class="py-2"></div>
         </section>
         <!-- tyre table[end] -->
+        <div class="container">
+            <div class="c_splitline"></div>
+        </div>
+        <div class="py-2"></div>
+        <!-- related products[start] -->
+        <?php include('../components/related-products.php') ?>
+        <!-- related products[end] -->
     </main>
     <!-- website footer[start] -->
     <?php include('../components/shared/footer.php') ?>

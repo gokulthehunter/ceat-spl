@@ -23,6 +23,7 @@ function productSllider(){
         }
     })
 };
+
 jQuery(document).ready(function(){
     filterActions();
     productSllider();
