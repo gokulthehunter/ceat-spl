@@ -1,0 +1,30 @@
+.user_d_info{background-color: #fff;padding:15px;cursor: pointer;max-width: 300px;margin: 0 0 0 auto;position: relative;@extend %transition;
+    &--img{width: 45px;}
+    &--details{width:calc(100% - 55px);padding:0 10px;
+        h6,p{font-size: 16px;margin:0;overflow: hidden;max-width: 190px;text-overflow: ellipsis;white-space: nowrap;}
+        p{font-size: 13px;}
+    }
+    &--arrow{width: 10px;}
+    &--hover{background: $color_main;width: 100px;font-size: 14px;padding:10px 15px;position: absolute;right:0;top: 100%;text-align: right;color: #fff;@extend %transition;opacity: 0;
+        &:hover{background: $color_sub;}
+    }
+    &:hover{background: $color_main;color:#fff;
+        svg path{fill:#fff;}
+        .user_d_info--hover{top: 100%;opacity: 1;}
+    }
+    @include media-xs-max(){max-width: 100%;margin-top:40px;}
+}
+
+.dash_data{padding:90px 0;max-width: 960px;margin:0 auto;
+    &--box{border:solid 1px #CBD0D5;padding:60px 50px 60px;display: block;border-radius:7px;overflow: hidden;position: relative;@extend %transition;margin:10px 0;
+        &:after{position:absolute;width: 90px;height: 90px;content: '';border:solid 1px #CBD0D5;background: #F4F6F8;right:-45px;bottom:-45px;transform:rotate(45deg);@extend %transition;}
+        svg path{@extend %transition;}
+        p{font-size: 28px;font-weight: 600;padding-top:80px;color: #000;line-height: 30px;@extend %transition;}
+        &:hover{
+            background: $color_main;border-color:$color_main;
+            svg path{fill:#fff;}
+            p{color: #fff;}
+        }
+    }
+    @include media-xs-max(){padding:40px 0;}
+}

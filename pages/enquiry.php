@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Distributor Registration</title>
+    <title>Enquiry</title>
     <?php include('../includes/header-imports.php') ?>
 </head>
 <body>

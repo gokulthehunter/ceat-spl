@@ -165,6 +165,19 @@ function formActions(){
   })
 };
 // form validations and actions[end]
+// tabing actions[start]
+function tabsAction() {
+  $(document).on("click", ".content_tabs_btns_ul--li", function () {
+    var _index = $(this).index();
+    $(".content_tabs_btns_ul--li").removeClass("state-active");
+    $(this).addClass("state-active");
+
+    $(".content_tabs_data--each").hide();
+    $(".content_tabs_data--each").eq(_index).fadeIn();
+  });
+}
+// tabing actions[end]
+
 
 
 jQuery(document).ready(function ($) {
@@ -176,6 +189,7 @@ jQuery(document).ready(function ($) {
   //imgSvgConvert(); //custom img to svg loader
   //inputBoxAnim(); //input box animation
   docClicks(); //doc clicks
+  tabsAction(); //tab actions
 }(jQuery));
 // multi imaging for mobile and desk img[start]
 function multiImg() {

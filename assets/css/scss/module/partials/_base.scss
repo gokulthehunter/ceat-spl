@@ -68,8 +68,25 @@ button{outline: none;box-shadow: none;background: none;border:none;
             &:hover{color: #fff;background: $color_main;}
             @include media-sm-max(){min-width:100px;}
         }
+        &_loader{
+            &--inner{color: $color_main;background: #F4F6F8;font-size: 14px;padding: 10px 40px;border-radius:20px;@extend %transition;
+                &:hover{color:#fff;background: $color_main;}
+            }
+            &_loading {width: 40px;display: flex;justify-content: space-between;align-items: center;margin: 0 auto;margin-top: -11px;position: relative;z-index: -1;opacity: 0;
+                &--item {width: 10px;height: 10px;border-radius: 50%;background: $color_main;
+                    &:nth-child(1) {animation: bouncing $anim-drt alternate infinite $anim-ease;}
+                    &:nth-child(2) {animation: bouncing $anim-drt $anim-drt/4 alternate infinite $anim-ease backwards;}
+                    &:nth-child(3) {animation: bouncing $anim-drt $anim-drt/2 alternate infinite $anim-ease backwards;}
+                }
+            }
+            &.in-loading{
+                .c_btn_loader--inner{opacity: 0}
+                .c_btn_loader_loading{opacity: 1}
+            }
+        }
     }
     &_splitline{background: #EFF2F3;width:100%;height:1px;}
+    
 }
 
 // slide controls
