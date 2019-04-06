@@ -24,13 +24,14 @@ function productSllider(){
     })
 };
 function productPageForms(){
+    // validator blue print
     function customerRequest(prefix){
         var _sel= {};
         _sel = {
             checkVal: $("input:radio[name ='" + prefix +"-radio']:checked"),
             cCode: $("#" + prefix +"-c-code"),
             phone: $("#" + prefix +"-mob")
-        }
+        };
         if (_sel.phone.val() == '') {
             _sel.phone.next(".c_field--error").show().text("Please enter your mobile number");
         } else if (!phoneCheck(_sel.phone.val())) {

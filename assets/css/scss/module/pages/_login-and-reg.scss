@@ -1,0 +1,10 @@
+.users{
+    &_copy{padding:50px 30px;
+        &_down{
+            &--text{font-size:13px;margin-bottom:0;color:#333;}
+            &--btn{font-size: 17px;@extend %transition;text-decoration: underline;color:#000;font-weight:600;
+                &:hover{color: $color_main;text-decoration: underline;}
+            }
+        }
+    }
+}
