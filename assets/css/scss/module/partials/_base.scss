@@ -27,6 +27,9 @@ button{outline: none;box-shadow: none;background: none;border:none;
 }
 .c{
     &_title{
+        .lined{padding-top:5px;display: inline-block;position: relative;
+            &:before{content:'';background: $color_sub;width: 40px;height: 1px;top: 0;left:0;position: absolute;}
+        }
         &--inner{font-weight:600;margin:0;font-size:22px;}
     }
     &_field{position: relative;padding-bottom:15px;
@@ -87,6 +90,13 @@ button{outline: none;box-shadow: none;background: none;border:none;
     }
     &_splitline{background: #EFF2F3;width:100%;height:1px;}
     
+}
+.r{
+    &_xs{
+        &--rev{
+            @include media-xs-min(){flex-direction: row-reverse;}
+        }
+    }
 }
 
 // slide controls

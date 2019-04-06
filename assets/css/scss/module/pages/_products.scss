@@ -1,3 +1,18 @@
+// product landing
+.prod_posts{
+    &_each{
+        p{font-size: 1rem;line-height: 1.6rem;margin:0;}
+        &--btn{font-size: 1rem;color: $color_main;@extend %transition;
+            svg path{fill:$color_main;@extend %transition;margin-left:5px;}
+            &:hover{color: $color_sub;
+                svg path{fill:$color_sub;}
+            }
+        }
+    }
+}
+
+
+
 .product_listing{position: relative;
     &:after{z-index: -1;position: absolute;top:0;left:0;width:100%;height:200px;background:#F4F6F8;content:'';}
 }

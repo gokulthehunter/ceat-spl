@@ -23,7 +23,7 @@
         &--text{font-size: 14px;color: #000;}
         &--date{font-size: 13px;color: #999;margin-bottom:0;}
         &--btn{font-size: 13px;color: $color_main;@extend %transition;
-            svg path{fill:$color_main;@extend %transition;}
+            svg path{fill:$color_main;@extend %transition;margin-left:5px;}
             &:hover{color: $color_sub;
                 svg path{fill:$color_sub;}
             }
