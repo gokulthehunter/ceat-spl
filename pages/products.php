@@ -71,7 +71,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-5 pt-4 pt-md-0">
                                     <img src="<?php echo  $imagesurl ?>prod-use-1.jpg" class="img-fluid" alt="image">
                                 </div>
                             </div>
@@ -101,7 +101,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-5 pt-4 pt-md-0">
                                     <img src="<?php echo  $imagesurl ?>prod-use-2.jpg" class="img-fluid" alt="image">
                                 </div>
                             </div>
@@ -148,7 +148,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-5 pt-4 pt-md-0">
                                     <img src="<?php echo  $imagesurl ?>prod-use-1.jpg" class="img-fluid" alt="image">
                                 </div>
                             </div>
@@ -178,7 +178,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
+                                <div class="col-md-5 pt-4 pt-md-0">
                                     <img src="<?php echo  $imagesurl ?>prod-use-2.jpg" class="img-fluid" alt="image">
                                 </div>
                             </div>
