@@ -27,10 +27,13 @@ button{outline: none;box-shadow: none;background: none;border:none;
 }
 .c{
     &_title{
-        .lined{padding-top:5px;display: inline-block;position: relative;
+        .lined{padding-top:7px;display: inline-block;position: relative;
             &:before{content:'';background: $color_sub;width: 40px;height: 1px;top: 0;left:0;position: absolute;}
         }
-        &--inner{font-weight:600;margin:0;font-size:22px;}
+        &--inner{font-weight:600;margin:0;font-size:1.3rem;
+            &.big{font-size:1.6rem;}
+            &.small{font-size:1rem;}
+        }
     }
     &_field{position: relative;padding-bottom:15px;
         &--input,&--textarea{padding:15px 20px;font-size:14px;width:100%;border:solid 1px #DEE3E8;outline:none;border-radius:6px;}
@@ -86,6 +89,9 @@ button{outline: none;box-shadow: none;background: none;border:none;
                 .c_btn_loader--inner{opacity: 0}
                 .c_btn_loader_loading{opacity: 1}
             }
+        }
+        &--rounded{display: inline-block;font-weight:600;color: $color_main;background:#F4F6F8;font-size: 0.9rem;padding:7px 30px;border-radius:20px;@extend %transition;
+            &:hover{color:#fff;background:$color_main;}
         }
     }
     &_splitline{background: #EFF2F3;width:100%;height:1px;}

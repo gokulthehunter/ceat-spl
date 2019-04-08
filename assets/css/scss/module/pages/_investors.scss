@@ -1,0 +1,24 @@
+.invest_high{padding-bottom:50px;
+    &_content{
+        &--text{font-size:0.9rem;margin-top:10px;color: #2E2E2E;}
+    }
+}
+
+.invest_policy{
+    &_holder{background:#fff;padding:50px;box-shadow: 0px 5px 17px -3px rgba(0,0,0,0.19);margin-top:-50px;
+        &--text{@extend .invest_high_content--text;padding:5px 0;}
+        &--btn{font-weight: bold;font-size:.9rem;color:$color_main;display: inline-block;@extend %transition;
+            svg path{fill:$color_main;margin-left:8px;@extend %transition;}
+            &:hover{color:$color_sub;
+                svg path{fill:$color_sub;}
+            }
+        }
+    }
+}
+
+.board_dir{
+    &_each{padding-bottom:30px;display:block;
+        &--name{font-size:1.2rem;font-weight:600;padding-top:10px;}
+        &--desg{color:#2e2e2e;font-size:0.8rem;margin-top:5px;}
+    }
+}
