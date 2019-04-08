@@ -87,7 +87,7 @@
         </section>
         <!-- our policy[end] -->
         <!-- board of directors[start] -->
-        <section class="board_dir bg_light py-5">
+        <section class="board_dir bg_light py-md-5 py-3">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
