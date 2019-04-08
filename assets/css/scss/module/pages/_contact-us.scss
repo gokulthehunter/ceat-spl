@@ -1,0 +1,36 @@
+.contact{
+    &_infos{padding:50px 35px;min-height:500px;
+        &--head{font-size:1rem;font-weight:bold;}
+        &--address{margin:25px 0 0 0;
+            p{font-size:0.9rem;margin:0;}
+            @include media-xs-max(){margin-top:10px;}
+        }
+        &_links{padding-top:20px;
+            &--title{color: #666;font-size:0.8rem;margin-bottom:0;}
+            &--a{color:#000;@extend %transition;
+                &:hover{color:$color_main;}
+            }
+            @include media-xs-max(){padding-top:10px;}
+        }
+        @include media-xs-max(){padding:35px 15px;min-height:auto;}
+    }
+    &_mails{
+        &_each{padding: 25px 20px;@extend .bg_light;margin-bottom:10px;@extend %transition;
+            &--title{color:#000;font-weight: 600;font-size:1rem;@extend %transition;}
+            &--mail{color: #000;font-size:0.9rem;@extend %transition;}
+            &--icon{
+                svg path{@extend %transition;}
+            }
+            &:hover{background: $color_main;
+                .contact_mails_each{
+                    &--title,&--mail{color:#fff;}
+                    &--icon{
+                        svg path{stroke:#fff;}
+                    }
+                }
+            }
+            @include media-xs-max(){padding:15px 10px;}
+        }
+        @include media-xs-max(){margin-top:10px;}
+    }
+}

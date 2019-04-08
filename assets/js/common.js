@@ -177,20 +177,6 @@ function tabsAction() {
   });
 }
 // tabing actions[end]
-
-
-
-jQuery(document).ready(function ($) {
-  multiImg(); // multi imaging for mobile and desk img
-  selectfileCustom(); //custom select box
-  numericOnlyInput(); //making inputbox numeric only
-  navAction(); //navigation actions
-  formActions(); //form actions
-  //imgSvgConvert(); //custom img to svg loader
-  //inputBoxAnim(); //input box animation
-  docClicks(); //doc clicks
-  tabsAction(); //tab actions
-}(jQuery));
 // multi imaging for mobile and desk img[start]
 function multiImg() {
   $(".multi-img").each(function () {
@@ -202,36 +188,36 @@ function multiImg() {
 };
 // multi imaging for mobile and desk img[end]
 // select box customization[start]
-function selectfileCustom(){
+function selectfileCustom() {
   // init
-  $("select").each(function(){
+  $("select").each(function () {
     $(this).niceSelect();
   });
   // country chooser
   var _seltext = $(".country-selector").next(".nice-select").find(".current"),
-      _seltextData = _seltext.text();
-  _seltext.text(_seltextData.slice(0,3));
-  $(".country-selector").on("change",function(){
-      var _changeData = $(this).val();
-      _seltext.text(_changeData.slice(0,3))
+    _seltextData = _seltext.text();
+  _seltext.text(_seltextData.slice(0, 3));
+  $(".country-selector").on("change", function () {
+    var _changeData = $(this).val();
+    _seltext.text(_changeData.slice(0, 3))
   });
 
   // country code changer[start]
-  $(".country-code-changer").each(function(){
+  $(".country-code-changer").each(function () {
     var _this = $(this),
-        _cCode = _this.next(".nice-select").find(".current"),
-        _cCodeData = _cCode.text(),
-        _cCodeDataSplitVal_1 = _cCodeData.split(' ')[0],
-        _cCodeDataSplitVal_2 = _cCodeData.split(' ')[1];
-    _cCode.html(_cCodeDataSplitVal_1.slice(0, 3) + '<span class="c-code">' + _cCodeDataSplitVal_2+'</span>');
-    _this.on("change",function(){
+      _cCode = _this.next(".nice-select").find(".current"),
+      _cCodeData = _cCode.text(),
+      _cCodeDataSplitVal_1 = _cCodeData.split(' ')[0],
+      _cCodeDataSplitVal_2 = _cCodeData.split(' ')[1];
+    _cCode.html(_cCodeDataSplitVal_1.slice(0, 3) + '<span class="c-code">' + _cCodeDataSplitVal_2 + '</span>');
+    _this.on("change", function () {
       var _changeData = $(this).val(),
-          _changeText = $(this).next(".nice-select").find(".option.selected").text();
-      _cCode.html(_changeText.slice(0, 3) + '<span class="c-code">'+_changeData+'</span>');
+        _changeText = $(this).next(".nice-select").find(".option.selected").text();
+      _cCode.html(_changeText.slice(0, 3) + '<span class="c-code">' + _changeData + '</span>');
     })
   })
   // country code changer[end]
-}; 
+};
 // select box customization[end]
 // numeric only input[start]
 function numericOnlyInput() {
@@ -252,3 +238,45 @@ function numericOnlyInput() {
   });
 };
 // numeric only input[end]
+// video popup action[start]
+function videoPopAction(){
+  $(".v-pop").on('click', function (e) {
+    e.preventDefault();
+    $("#v-popup-overlay,#v-popup-iframe-container,#v-popup-container,#v-popup-close").fadeIn();
+
+    var srchref = '', 
+        autoplay = '', 
+        id = $(this).data('id'),
+        vFrame = $("#v-popup-iframe");
+    if ($(this).data('type') == 'vimeo') {
+        srchref = "//player.vimeo.com/video/";
+    } else if ($(this).data('type') == 'youtube') {
+        srchref = "https://www.youtube.com/embed/";
+    };
+    // autoplay
+    if ($(this).data('autoplay') == true) {
+      autoplay = '?autoplay=1';
+    };
+    vFrame.attr('src', srchref + id + autoplay);
+    vFrame.on('load', function () {
+      $("#v-popup-container").fadeIn();
+    });
+  });
+  // close cllick
+  $("#v-popup-close, #v-popup-overlay").on('click', function (e) {
+    $("#v-popup-iframe-container,#v-popup-container,#v-popup-close,#v-popup-overlay").hide();
+    $("#v-popup-iframe").attr('src', '');
+  });
+}
+// video popup action[end]
+jQuery(document).ready(function ($) {
+  multiImg(); // multi imaging for mobile and desk img
+  selectfileCustom(); //custom select box
+  numericOnlyInput(); //making inputbox numeric only
+  navAction(); //navigation actions
+  formActions(); //form actions
+  //imgSvgConvert(); //custom img to svg loader
+  docClicks(); //doc clicks
+  tabsAction(); //tab actions
+  videoPopAction(); //video pop action
+}(jQuery));

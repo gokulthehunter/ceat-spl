@@ -8,6 +8,21 @@
                 svg path{fill:$color_sub;}
             }
         }
+        // video type post
+        &_video{position: relative;overflow: hidden;cursor: pointer;
+            &:before{content:'';position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.2);@extend %transition;z-index:1;}
+            &--btn,&--text{position: absolute;width:100%;left:0;z-index: 2;}
+            &--btn{top: 50%;transform:translateY(-50%);
+                svg{width:55px;height:55px;border-radius:50%;
+                    path{@extend %transition;}
+                    &:hover{
+                        path:first-child{fill:$color_sub;}
+                    }
+                }
+            }
+            &--text{bottom:15px;color:#fff;font-weight:600;font-size:1.3rem;}
+            &:hover:before{background:rgba(0,0,0,0.6);}
+        }
     }
 }
 

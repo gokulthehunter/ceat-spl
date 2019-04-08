@@ -20,10 +20,10 @@
 // other comps
 @import 'module/components/page-header-and-cremb';
 @import 'module/components/customer-request-form';
+@import 'module/components/video-popup';
 // product page related
 @import 'module/components/product-filter';
 @import 'module/components/product-list';
-
 
 // :::::::  pages ::::::: 
 @import 'module/pages/index';
@@ -31,4 +31,6 @@
 @import 'module/pages/login-and-reg';
 @import 'module/pages/dashboard';
 @import 'module/pages/media';
+@import 'module/pages/technology';
+@import 'module/pages/contact-us';
 
