@@ -13,11 +13,13 @@
                 svg path{fill:$color_sub;}
             }
         }
+        @include media-xs-max(){padding:25px;}
     }
 }
 
 .board_dir{
     &_each{padding-bottom:30px;display:block;
+        img{width: 100%;}
         &--name{font-size:1.2rem;font-weight:600;padding-top:10px;}
         &--desg{color:#2e2e2e;font-size:0.8rem;margin-top:5px;}
     }

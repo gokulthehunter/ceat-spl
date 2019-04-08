@@ -30,7 +30,7 @@
         <!-- cremb and heading[end] -->
         <!-- investors highlights[start] -->
         <section class="invest_high">
-            <div class="container py-5">
+            <div class="container py-md-5 py-3">
                 <div class="row align-items-start">
                     <div class="col-md-5 offset-md-1">
                         <div class="invest_high_content px-3 py-4">
@@ -168,14 +168,8 @@
     <!-- website footer[start] -->
     <?php include('../components/shared/footer.php') ?>
     <!-- website footer[end] -->
-
-    <!-- additonal popups[start] -->
-    <?php include('../components/video-popup.php') ?>
-    <!-- additonal popups[end] -->
-
     <!-- scripts[start] -->
     <?php include('../includes/bottom-scripts.php') ?> 
     <!-- scripts[end] -->
-    <!-- page script -->
 </body>
 </html>
