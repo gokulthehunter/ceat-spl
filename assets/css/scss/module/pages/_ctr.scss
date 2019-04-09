@@ -1,0 +1,25 @@
+.ctr_wrapper{
+    &_each{padding:50px 0;
+        &:first-child{padding-top:0;}
+        &_poster{
+            &.is_stuck{position:fixed;}
+            @include media-xs-max(){margin-bottom:20px;}
+        }
+        &_content{
+            p{font-size:0.9rem;color: #2e2e2e;margin:0;}
+            &--title{padding:30px 0;font-size:1.3rem;margin:0;}
+            &--more{display: none;}
+            &--btn{font-weight: 600;font-size:0.9rem;display:inline-block;@extend %transition;
+                svg{@extend %transition;margin-left:5px;
+                    path{@extend %transition;fill:$color_main;}
+                } 
+                &:hover,&.state-active{color: $color_sub;
+                    svg path{fill:$color_sub;}
+                }
+                &.state-active{
+                    svg{transform: rotate(180deg);}
+                }
+            }
+        }
+    }
+}
