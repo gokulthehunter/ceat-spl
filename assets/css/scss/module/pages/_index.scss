@@ -1,3 +1,16 @@
 .main_banner{
     img{width: 100%;}
 }
+.hero_slider{
+    &_each{overflow: hidden;
+        &--img{min-height:500px;background-size:cover;background-position:center center;background-repeat: no-repeat;}
+        &_data{width: 100%;position: absolute;top:50%; transform: translateY(-50%);
+            &--title{font-weight:bold;font-size:1.8rem;text-transform: uppercase;margin:0;}
+            &--sub{font-size: 1.2rem;font-weight: 600;margin: 10px 0;}
+            &--btn{margin-top:5px;display: inline-block;border:solid 1px #000;padding:10px 40px;color: #000;text-transform:uppercase;font-weight:600;text-transform:uppercase;border-radius:5px;@extend %transition;
+                &:hover{color: #fff;background: #000;}
+            }
+        }
+    }
+    .slider_controls{position: absolute;bottom:0px;z-index: 1;left:50%;transform:translateX(-50%);}
+}

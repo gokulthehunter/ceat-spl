@@ -295,6 +295,7 @@
     <!-- scripts[start] -->
     <?php include('../includes/bottom-scripts.php') ?> 
     <!-- scripts[end] -->
+    <!-- page dependancy script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <!-- page script -->
     <script src="<?php echo $assetsurl ?>js/page-js/products.js"></script>
