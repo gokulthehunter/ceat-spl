@@ -3,6 +3,10 @@
         &--radios{
             p{margin:0;}
         }
+        &--copy{
+            .c_title--inner{font-weight:bold;}
+            p{display: block;font-size:0.8rem;color:#2e2e2e;}
+        }
         .c_field--input,.c_btn--inner{background: none;}
         .c_btn--inner{
             &:hover{background: $color_main;}

@@ -5,7 +5,7 @@
                 &.state-active{color: #000;border-bottom:solid 3px $color_sub;}
                 &:hover{color: #000;}
             }
-            @include media-xs-max(){white-space: nowrap;overflow-x:auto;-webkit-overflow-scrolling: touch;}
+            @include media-xs-max(){white-space: nowrap;overflow-x:auto;-webkit-overflow-scrolling: touch;text-align: left;}
         }
     }
     &_data{
