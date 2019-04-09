@@ -1,4 +1,4 @@
-.page_head{background: #F4F6F8;padding:50px 0;
+.page_head{background: #F4F6F8;padding:40px 0;
     &.white-bg{background: #fff;}
     &_cremb{
         &--link{font-weight: lighter;color:#000;margin-right:20px;font-size:14px;@extend %transition;position: relative;
@@ -8,4 +8,5 @@
         }
     }
     &--title{font-weight: 600;color:#000;font-size: 28px;/* padding-top:10px; */margin-bottom:0;}
+    @include media-xs-max(){padding:25px 0;}
 }

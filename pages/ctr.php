@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Compaction</title>
+    <title>CTR</title>
     <?php include('../includes/header-imports.php') ?>
 </head>
 <body>

@@ -1,0 +1,13 @@
+.t_care{
+    &_each{
+        &_data{
+            p{font-size: 0.9rem;color:#2e2e2e;}
+            &_listing{padding-left:20px;border-left:solid 1px $color_sub;margin-top:30px;
+                &--title{font-weight:600;font-size:1rem;}
+                ul{margin:0;padding:0;max-width:400px;
+                    li{border-bottom:solid 1px #e5e5e5;font-size:0.9rem;padding:10px 0;}
+                }
+            }
+        }
+    }
+}
