@@ -93,9 +93,30 @@ button{outline: none;box-shadow: none;background: none;border:none;
         &--rounded{display: inline-block;font-weight:600;color: $color_main;background:#F4F6F8;font-size: 0.9rem;padding:7px 30px;border-radius:20px;@extend %transition;
             &:hover{color:#fff;background:$color_main;}
         }
+        &--plain{color: $color_main;@extend %transition;font-weight:600;display: inline-block;font-size:1rem;
+            svg{width: 10px;height:8px;margin-left:5px;
+                path{fill:$color_main;@extend %transition;}
+            }
+            &:hover{color:$color_sub;
+                svg path{fill: $color_sub;}
+            }
+            &.white{@extend .clr_white--text;
+                svg path{@extend .clr_white--fill;}
+            }
+        }
     }
     &_splitline{background: #EFF2F3;width:100%;height:1px;}
-    
+    &_text{
+        &--inner{font-size: 0.9rem;color:#2e2e2e;line-height: 1.4rem;}
+    }
+}
+.clr{
+    &_white{
+        &--text{color: #fff;}
+        &--fill{
+            svg path{fill:#fff;}
+        }
+    }
 }
 .r{
     &_xs{

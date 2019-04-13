@@ -106,7 +106,6 @@ function docClicks(){
     }
   })
 };
-
 // form validations and actions[start]
 // email validator 
 function ValidateEmail(mail) {
@@ -269,6 +268,14 @@ function videoPopAction(){
   });
 }
 // video popup action[end]
+// get set offset[start]
+function getSetOffsets() {
+  if (desktop) {
+    var _contOffLeft = $(".container").offset().left + 15
+    $(".land_event_data").css("padding-left", _contOffLeft)
+  }
+}
+// get set offset[end]
 jQuery(document).ready(function ($) {
   multiImg(); // multi imaging for mobile and desk img
   selectfileCustom(); //custom select box
@@ -279,4 +286,8 @@ jQuery(document).ready(function ($) {
   docClicks(); //doc clicks
   tabsAction(); //tab actions
   videoPopAction(); //video pop action
+  getSetOffsets(); //getting and setting offsets
 }(jQuery));
+$(window).on("resize",function () {
+  getSetOffsets(); //getting and setting offsets
+})

@@ -18,8 +18,6 @@ function bannerSlider(sel){
             clickable: true,
         },
         on: {
-            init: function (event) {
-            },
             progress: function () {
                 let swiper = this;
                 for (let i = 0; i < swiper.slides.length; i++) {
@@ -46,10 +44,26 @@ function bannerSlider(sel){
             }
         }
     });
+};
+function eventSlide(sel) {
+    var popSlider = new Swiper(sel, {
+        centeredSlides: true,
+        slidesPerView: 1,
+        speed: 1000,
+        navigation: {
+            prevEl: '.event-slide-prev',
+            nextEl: '.event-slide-next',
+        },
+        pagination: {
+            el: '.slide-dots',
+            clickable: true,
+        },
+    });
 }
 
 
 jQuery(document).ready(function($){
     bannerSlider(".hero_slider"); // init banner slider
+    eventSlide(".event_img_slider");
 
 }(jQuery))

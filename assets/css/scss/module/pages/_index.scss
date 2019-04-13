@@ -4,7 +4,7 @@
 .hero_slider{
     &_each{overflow: hidden;
         &--img{min-height:70vh;background-size:cover;background-position:center center;background-repeat: no-repeat;}
-        &_data{width: 100%;position: absolute;top:50%; transform: translateY(-50%);
+        &_data{width: 100%;position: absolute;top:50%; transform: translateY(-50%);z-index: 1;
             &--title{font-weight:bold;font-size:1.8rem;text-transform: uppercase;margin:0;}
             &--sub{font-size: 1.2rem;font-weight: 600;margin: 10px 0;}
             &--btn{margin-top:5px;display: inline-block;border:solid 1px #000;padding:10px 40px;color: #000;text-transform:uppercase;font-weight:600;text-transform:uppercase;border-radius:5px;@extend %transition;
@@ -13,4 +13,23 @@
         }
     }
     .slider_controls{position: absolute;bottom:0px;z-index: 1;left:50%;transform:translateX(-50%);}
+}
+
+.land_event{background: $color_main;
+    &_data{padding:50px;
+        &--title{font-size: 1.1rem;font-weight: 600;text-transform: uppercase;}
+        &--copy{font-size: 1.4rem;}
+        &--fnote{position: absolute;bottom:60px;}
+    }
+    .event_img_slider{
+        &--each{
+            img{width: 100%;}
+        }
+        .slider_controls{position: absolute;bottom: 10px;z-index: 1;left: 50%;transform: translateX(-50%);}
+    }
+}
+.partners_each{padding:10px;
+    a{width: 100%;height: 90px;border:solid 1px #e5e5e5;display: block;padding:15px;text-align:center;
+        img{display: inline-block;width: 100%;}
+    }
 }
