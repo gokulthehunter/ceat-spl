@@ -101,6 +101,9 @@ button{outline: none;box-shadow: none;background: none;border:none;
     &_xs{
         &--rev{
             @include media-xs-min(){flex-direction: row-reverse;}
+            .row{
+                @include media-xs-min(){flex-direction: row-reverse;}
+            }
         }
     }
 }
