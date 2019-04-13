@@ -106,6 +106,14 @@ button{outline: none;box-shadow: none;background: none;border:none;
             }
         }
     }
+    &_xs_max{
+        &--rev{
+            @include media-xs-max(){flex-direction: row-reverse;}
+            .row{
+                @include media-xs-max(){flex-direction: row-reverse;}
+            }
+        }
+    }
 }
 
 // slide controls

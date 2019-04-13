@@ -171,8 +171,6 @@
                 });
             }
         }(jQuery));
-        // $(window).on("load",function(){
-        // })
     </script>
 </body>
 </html>
