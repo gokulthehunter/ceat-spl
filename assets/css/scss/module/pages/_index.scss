@@ -5,10 +5,32 @@
     &_each{overflow: hidden;
         &--img{min-height:70vh;background-size:cover;background-position:center center;background-repeat: no-repeat;}
         &_data{width: 100%;position: absolute;top:50%; transform: translateY(-50%);z-index: 1;
-            &--title{font-weight:bold;font-size:1.8rem;text-transform: uppercase;margin:0;}
-            &--sub{font-size: 1.2rem;font-weight: 600;margin: 10px 0;}
+            &--title{font-weight:bold;font-size:1.8rem;text-transform: uppercase;margin:0;
+                @include media-xs-max(){font-size:1.2rem;}
+            }
+            &--sub{font-size: 1.2rem;font-weight: 600;margin: 10px 0;
+                @include media-xs-max(){font-size:0.9rem;}
+            }
             &--btn{margin-top:5px;display: inline-block;border:solid 1px #000;padding:10px 40px;color: #000;text-transform:uppercase;font-weight:600;text-transform:uppercase;border-radius:5px;@extend %transition;
                 &:hover{color: #fff;background: #000;}
+            }
+            @include media-xs-max(){text-align: center;transform:none;top:25px;}
+        }
+        &.text-white{
+            .hero_slider_each_data--btn{color: #fff;border-color: #fff;
+                &:hover{color: #000;background: #fff;}
+            }
+        }
+        &.video-slide{
+            .hero_slider_each_data--btn{border:none;padding:0;
+                svg{display: inline-block;vertical-align: middle;width:40px;height:40px;margin-right:5px;
+                    path{
+                        &:first-child{@extend %transition;}
+                    }
+                }
+                &:hover{background:none;
+                    svg path:first-child{fill:$color_sub;}
+                }
             }
         }
     }
@@ -19,13 +41,18 @@
     &_data{padding:50px;
         &--title{font-size: 1.1rem;font-weight: 600;text-transform: uppercase;}
         &--copy{font-size: 1.4rem;}
-        &--fnote{position: absolute;bottom:60px;}
+        &--fnote{position: absolute;bottom:60px;
+            @include media-xs-max(){position: static;margin-top:30px;}
+        }
+        @include media-xs-max(){padding:25px 15px;}
     }
     .event_img_slider{
         &--each{
             img{width: 100%;}
         }
-        .slider_controls{position: absolute;bottom: 10px;z-index: 1;left: 50%;transform: translateX(-50%);}
+        .slider_controls{position: absolute;bottom: 10px;z-index: 1;left: 50%;transform: translateX(-50%);
+            @include media-xs-max(){margin-bottom:0;}
+        }
     }
 }
 .partners_each{padding:10px;

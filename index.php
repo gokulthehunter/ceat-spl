@@ -18,7 +18,7 @@
             <div class="hero_slider swiper-container">
                 <div class="swiper-wrapper">
                     <div class="hero_slider_each swiper-slide">
-                        <div class="hero_slider_each--img" style="background-image: url('<?php echo $imagesurl ?>main-banner.jpg')"></div>                        
+                        <div class="hero_slider_each--img multi-img-bg" data-m="<?php echo $imagesurl ?>main-banner-mob.jpg" data-d="<?php echo $imagesurl ?>main-banner.jpg"></div>                        
                         <div class="hero_slider_each_data">
                             <div class="container">
                                 <h2 class="hero_slider_each_data--title">GREATER LUG OVERLAP.<br/>LESS VIBRATIONS ON ROAD.</h2>
@@ -27,8 +27,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hero_slider_each swiper-slide">
-                        <div class="hero_slider_each--img" style="background-image: url('<?php echo $imagesurl ?>main-banner.jpg')"></div>
+                    <div class="hero_slider_each swiper-slide text-md-right text-white">
+                        <div class="hero_slider_each--img multi-img-bg" data-m="<?php echo $imagesurl ?>main-banner-mob.jpg" data-d="<?php echo $imagesurl ?>main-banner-f.jpg"  style="background-image: url('<?php echo $imagesurl ?>main-banner-f.jpg')"></div>
                         <div class="hero_slider_each_data">
                             <div class="container">
                                 <h2 class="hero_slider_each_data--title">GREATER LUG OVERLAP.<br/>LESS VIBRATIONS ON ROAD.</h2>
@@ -37,13 +37,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="hero_slider_each swiper-slide">
-                        <div class="hero_slider_each--img" style="background-image: url('<?php echo $imagesurl ?>main-banner.jpg')"></div>
+                    <div class="hero_slider_each swiper-slide video-slide">
+                        <div class="hero_slider_each--img multi-img-bg" data-m="<?php echo $imagesurl ?>main-banner-mob.jpg" data-d="<?php echo $imagesurl ?>main-banner.jpg"  style="background-image: url('<?php echo $imagesurl ?>main-banner.jpg')"></div>
                         <div class="hero_slider_each_data">
                             <div class="container">
                                 <h2 class="hero_slider_each_data--title">GREATER LUG OVERLAP.<br/>LESS VIBRATIONS ON ROAD.</h2>
                                 <h2 class="hero_slider_each_data--sub">Presenting CEAT Farmax85 Farm Radials</h2>
-                                <a href="javascript:void(0)" class="hero_slider_each_data--btn">Know More</a>
+                                <a href="javascript:void(0)" class="hero_slider_each_data--btn v-pop" data-type="youtube" data-id="udnjPDsUBug">
+                                    <svg viewBox="0 0 55 55" style="enable-background:new 0 0 55 55;">
+                                        <g>
+                                            <path fill="#076ED5" d="M27.5,0C42.7,0,55,12.3,55,27.5S42.7,55,27.5,55S0,42.7,0,27.5S12.3,0,27.5,0z"></path>
+                                            <path fill="#F6FAFB" d="M25.1,20.1v14.4l8.5-7.2L25.1,20.1z"></path>
+                                        </g>
+                                    </svg>
+                                    <span>Watch Video</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -101,8 +109,8 @@
         <!-- 3 cloumn post[start] -->
         <div class="container">
             <div class="row py-md-5 py-4">
-                <div class="col-md-4">
-                    <a href="javascript:void(0)" class="pb-4 d-block">
+                <div class="col-md-4 py-4 py-md-0">
+                    <a href="javascript:void(0)" class="pb-md-4 pb-2 d-block">
                         <img src="<?php echo $imagesurl ?>press/1.png" class="img-fluid w-100" alt="image">
                     </a>
                     <div class="c_title py-2">
@@ -123,8 +131,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <a href="javascript:void(0)" class="pb-4 d-block">
+                <div class="col-md-4 py-4 py-md-0">
+                    <a href="javascript:void(0)" class="pb-md-4 pb-2 d-block">
                         <img src="<?php echo $imagesurl ?>press/1.png" class="img-fluid w-100" alt="image">
                     </a>
                     <div class="c_title py-2">
@@ -145,8 +153,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <a href="javascript:void(0)" class="pb-4 d-block">
+                <div class="col-md-4 py-4 py-md-0">
+                    <a href="javascript:void(0)" class="pb-md-4 pb-2 d-block">
                         <img src="<?php echo $imagesurl ?>press/1.png" class="img-fluid w-100" alt="image">
                     </a>
                     <div class="c_title py-2">
@@ -170,10 +178,10 @@
             </div>
         </div>
         <!-- 3 cloumn post[end] -->
-        <div class="py-4"></div>
+        <div class="py-md-4"></div>
         <!-- events full sec[start] -->
         <div class="land_event">
-            <div class="d-flex">
+            <div class="d-md-flex">
                 <div class="col-md-6 p-0">
                     <div class="land_event_data">
                         <h6 class="land_event_data--title clr_white--text">EVENTS</h6>
@@ -308,7 +316,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 pt-3">
+                <div class="col-12 pt-3 pb-5">
                     <div class="c_btn text-center">
                         <a href="#" class="c_btn--plain">See all Partners
                             <svg width="3.753" height="6.7" viewBox="0 0 3.753 6.7">
@@ -324,17 +332,20 @@
             </div>
         </div>
         <!-- partners[end] -->
-        <div class="py-5"></div>
-        <div class="py-5"></div>
+        <!-- testimonials[start] -->
+        <?php include('./components/testimonial.php') ?>
+        <!-- testimonials[end] -->
     </main>
     <!-- website footer[start] -->
     <?php include('./components/shared/footer.php') ?>
     <!-- website footer[end] -->
+    <!-- additonal popups[start] -->
+    <?php include('./components/video-popup.php') ?>
+    <!-- additonal popups[end] -->
     <!-- scripts[start] -->
     <?php include('./includes/bottom-scripts.php') ?> 
     <!-- scripts[end] -->
     <!-- page dependancy scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <!-- page scripts -->
     <script src="<?php echo $assetsurl ?>js/page-js/index.js"></script>
 </body>

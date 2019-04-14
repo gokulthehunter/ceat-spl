@@ -179,11 +179,22 @@ function tabsAction() {
 // multi imaging for mobile and desk img[start]
 function multiImg() {
   $(".multi-img").each(function () {
-    var _this = $(this);
-    var imgD = _this.attr("data-d"),
-      imgM = _this.attr("data-m");
-    if (isMobile()) { _this.attr("src", imgM); } else { _this.attr("src", imgD) };
+    var _this = $(this),
+        imgD = _this.attr("data-d"),
+        imgM = _this.attr("data-m");
+    if (mobile) { _this.attr("src", imgM); } else { _this.attr("src", imgD) };
   });
+
+  $(".multi-img-bg").each(function(){
+    var _this = $(this),
+    imgD = _this.attr("data-d"),
+    imgM = _this.attr("data-m");
+    if (mobile) {
+      _this.css("background-image", "url('" + imgM + "')");
+    }else { 
+      _this.css("background-image", "url('"+imgD+"')");
+    };
+  })
 };
 // multi imaging for mobile and desk img[end]
 // select box customization[start]
@@ -276,6 +287,32 @@ function getSetOffsets() {
   }
 }
 // get set offset[end]
+// testimonial slider[start]
+function testiSlider(selmain,selthumb){
+  var testi_slideThumbs = new Swiper(selthumb, {
+    slideToClickedSlide: true,
+    slidesPerView: "auto",
+    watchSlidesVisibility:true,
+    speed: 1000,
+    thumbs: {
+      swiper: testi_slideMain
+    }
+  });
+  var testi_slideMain = new Swiper(selmain, {
+      centeredSlides: true,
+      slidesPerView: 1,
+      speed: 1000,
+      effect:"fade",
+      fadeEffect: {
+        crossFade: true
+      },
+      thumbs: {
+        swiper: testi_slideThumbs
+      }
+  });
+
+};
+// testimonial slider[end]
 jQuery(document).ready(function ($) {
   multiImg(); // multi imaging for mobile and desk img
   selectfileCustom(); //custom select box
@@ -287,7 +324,9 @@ jQuery(document).ready(function ($) {
   tabsAction(); //tab actions
   videoPopAction(); //video pop action
   getSetOffsets(); //getting and setting offsets
+  testiSlider(".testi_wrapper_slider",".testi_wrapper_thumbs") // test slider
 }(jQuery));
 $(window).on("resize",function () {
+  multiImg();
   getSetOffsets(); //getting and setting offsets
 })

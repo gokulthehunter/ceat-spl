@@ -1,5 +1,6 @@
 .page_head{background: #F4F6F8;padding:40px 0;
     &.white-bg{background: #fff;}
+    &.trans_head{background: none;padding:15px 0;z-index: 1;position: relative;}
     &_cremb{
         &--link{font-weight: lighter;color:#000;margin-right:20px;font-size:14px;@extend %transition;position: relative;
             &:after{content:'';background:url(#{$img_url}arrow-right.svg)no-repeat center center / contain;width: 8px;height:8px;position:absolute;right:-15px;top:8px;}
