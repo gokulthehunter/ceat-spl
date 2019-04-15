@@ -1,0 +1,11 @@
+.tab_wraps{
+    &_each{
+        &--title{text-transform:uppercase;letter-spacing:3px;font-weight:600;}
+        &_high{
+            &--letter{height:70px;width: 70px;background:$color_main;text-align:center;font-size: 2rem;line-height: 2rem;text-transform:uppercase;border-radius:6px;color:#fff;font-weight:bold;padding:17px 0;}
+            &--copy{padding-left: 15px;
+                p{margin:0;line-height:1.25rem;margin-top:3px;}
+            }
+        }
+    }
+}
