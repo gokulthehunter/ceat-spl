@@ -55,8 +55,22 @@ function productPageForms(){
         customerRequest("cus-req");
     });
 }
+
+function loadTables(){
+    $.get("../assets/tables/floatmax.html", function (data) {
+        $("#table-holder").html(data);
+        
+    }).done(function () {
+        var $container = $(".wrap-scrolls");
+        var $scroller = $("#table-holder");
+        bindDragScroll($container, $scroller);
+        $(".table-loading").fadeOut();
+    })
+    
+}
 jQuery(document).ready(function(){
     filterActions();
     productSllider();
     productPageForms();
+    loadTables();
 })

@@ -220,39 +220,49 @@
                 </div>
                 <div class="row align-items-streach">
                     <div class="col-lg-11 mt-4 pr-lg-0">
-                        <div class="table-responsive">
-                            <table class="table-bordered w-100 text-center">
-                                <tr>
-                                    <th rowspan="2">Machinery</th>
-                                    <th rowspan="2">Tech</th>
-                                    <th rowspan="2">Pattern<br/>Name</th>
-                                    <th rowspan="2">Size</th>
-                                    <th rowspan="2">LI/SS</th>
-                                    <th rowspan="2">Rim</th>
-                                    <th colspan="2"><div class="small-text">Unloaded Dimension</div></th>
-                                    <th rowspan="2">SLR<p>mm/in</p></th>
-                                    <th rowspan="2">RC<p>mm/in</p></th>
-                                    <th rowspan="2" class="by-split">NSD<p>mm</p><div class="small-text">32nds</div></th>
-                                </tr>
-                                <tr>
-                                    <th>SW<p>mm/in</p></th>
-                                    <th>OD<p>mm/in</p></th>
-                                </tr>
-                                <!-- datas -->
-                                <tr>
-                                    <td>1.0</td>
-                                    <td>10.00</td>
-                                    <td>40.00</td>
-                                    <td>52.00</td>
-                                    <td>40</td>
-                                    <td>62</td>
-                                    <td>1.0</td>
-                                    <td>10.00</td>
-                                    <td>40.00</td>
-                                    <td>52.00</td>
-                                    <td>40</td>
-                                </tr>
-                            </table>
+                        <div class="wrap-scrolls">
+                            <div class="" id="table-holder">
+                                <div class="table-loading">
+                                    <div class="c_btn_loader_loading">
+                                        <div class="c_btn_loader_loading--item"></div>
+                                        <div class="c_btn_loader_loading--item"></div>
+                                        <div class="c_btn_loader_loading--item"></div>
+                                    </div>
+                                    <h4 class=" c_title--inner small">please Wait a second...</h4>
+                                </div>
+                                <!-- appended tables -->
+                                <!-- <table class="table-bordered w-100 text-center">
+                                    <tr>
+                                        <th rowspan="2">Machinery</th>
+                                        <th rowspan="2">Tech</th>
+                                        <th rowspan="2">Pattern<br/>Name</th>
+                                        <th rowspan="2">Size</th>
+                                        <th rowspan="2">LI/SS</th>
+                                        <th rowspan="2">Rim</th>
+                                        <th colspan="2"><div class="small-text">Unloaded Dimension</div></th>
+                                        <th rowspan="2">SLR<p>mm/in</p></th>
+                                        <th rowspan="2">RC<p>mm/in</p></th>
+                                        <th rowspan="2" class="by-split">NSD<p>mm</p><div class="small-text">32nds</div></th>
+                                    </tr>
+                                    <tr>
+                                        <th>SW<p>mm/in</p></th>
+                                        <th>OD<p>mm/in</p></th>
+                                    </tr>
+                                    <tr>
+                                        <td>1.0</td>
+                                        <td>10.00</td>
+                                        <td>40.00</td>
+                                        <td>52.00</td>
+                                        <td>40</td>
+                                        <td>62</td>
+                                        <td>1.0</td>
+                                        <td>10.00</td>
+                                        <td>40.00</td>
+                                        <td>52.00</td>
+                                        <td>40</td>
+                                    </tr>
+                                </table> -->
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-1 pl-lg-0 mt-4">
@@ -297,6 +307,7 @@
     <!-- scripts[end] -->
     <!-- page dependancy script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+    <script src="<?php echo $assetsurl?>js/dragScroll.min.js"></script>
     <!-- page script -->
     <script src="<?php echo $assetsurl ?>js/page-js/products.js"></script>
 </body>
