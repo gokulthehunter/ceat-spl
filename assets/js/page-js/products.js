@@ -61,11 +61,11 @@ function loadTables(){
         $("#table-holder").html(data);
         
     }).done(function () {
-        var $container = $(".wrap-scrolls");
-        var $scroller = $("#table-holder");
-        bindDragScroll($container, $scroller);
+        var _container = $(".wrap-scrolls"),
+            _scroller = $("#table-holder");
+        bindDragScroll(_container, _scroller);
         $(".table-loading").fadeOut();
-    })
+    });
     
 }
 jQuery(document).ready(function(){

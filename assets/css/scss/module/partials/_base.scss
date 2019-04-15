@@ -33,6 +33,7 @@ button{outline: none;box-shadow: none;background: none;border:none;
 }
 .mx{
     &_900{max-width: 900px;margin:0 auto;}
+    &_800{max-width: 800px;margin:0 auto;}
 }
 .c{
     &_title{
@@ -42,6 +43,9 @@ button{outline: none;box-shadow: none;background: none;border:none;
         &--inner{font-weight:600;margin:0;font-size:1.3rem;
             &.big{font-size:1.6rem;}
             &.small{font-size:1rem;}
+            &.lined{padding-top:7px;display: inline-block;position: relative;
+                &:before{content:'';background: $color_sub;width: 40px;height: 1px;top: 0;left:0;position: absolute;}
+            }
             &.gap{
                 &_big{line-height: 2.2rem;}
                 &_small{line-height: 1.6rem;}
@@ -49,7 +53,8 @@ button{outline: none;box-shadow: none;background: none;border:none;
         }
     }
     &_field{position: relative;padding-bottom:15px;
-        &--input,&--textarea{padding:15px 20px;font-size:14px;width:100%;border:solid 1px #DEE3E8;outline:none;border-radius:6px;}
+        input,textarea,&--input,&--textarea{padding:15px 20px;font-size:14px;width:100%;border:solid 1px #DEE3E8;outline:none;border-radius:6px;resize: none;}
+        textarea{vertical-align: bottom;}
         &--error{color:$color_sub;font-size:12px;right:6px;bottom:14px;position: absolute;margin:0;display: none}
         &.with_country{
             .c_field{
@@ -135,6 +140,7 @@ button{outline: none;box-shadow: none;background: none;border:none;
             svg path{fill:#fff;}
         }
     }
+    &_light{color:#999;}
 }
 .r{
     &_xs{
