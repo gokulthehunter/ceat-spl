@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Landing Page</title>
+    <title>Life @ Ceat</title>
     <?php include('../includes/header-imports.php') ?>
 </head>
 <body>

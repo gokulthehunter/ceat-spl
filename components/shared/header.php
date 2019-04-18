@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-2 col-3">
-                        <a href="javascript:void(0)" class="header_top--logo">
+                        <a href="<?php echo $siteurl ?>" class="header_top--logo">
                             <img src="<?php echo $imagesurl ?>brand-logo@2x.png" class="img-fluid" alt="Ceat">
                         </a>
                     </div>
@@ -26,7 +26,7 @@
                                         <div class="container">
                                             <div class="row">
                                                 <div class="col-lg-3">
-                                                    <a href="<?php echo $siteurl ?>pages/product-listing.php" class="header_top_nav_ul_li_sub_each">
+                                                    <a href="<?php echo $siteurl ?>pages/product-details.php" class="header_top_nav_ul_li_sub_each">
                                                         <h5 class="header_top_nav_ul_li_sub_each--title">Agriculture</h5>
                                                         <div class="header_top_nav_ul_li_sub_each--img">
                                                             <img src="<?php echo $imagesurl ?>header/products/1.jpg" class="img-fluid" alt="image">
@@ -34,7 +34,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="col-lg-3">
-                                                    <a href="<?php echo $siteurl ?>pages/product-listing.php" class="header_top_nav_ul_li_sub_each">
+                                                    <a href="<?php echo $siteurl ?>pages/product-details.php" class="header_top_nav_ul_li_sub_each">
                                                         <h5 class="header_top_nav_ul_li_sub_each--title">Port & Industrial</h5>
                                                         <div class="header_top_nav_ul_li_sub_each--img">
                                                             <img src="<?php echo $imagesurl ?>header/products/2.jpg" class="img-fluid" alt="image">
@@ -42,7 +42,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="col-lg-3">
-                                                    <a href="<?php echo $siteurl ?>pages/product-listing.php" class="header_top_nav_ul_li_sub_each">
+                                                    <a href="<?php echo $siteurl ?>pages/product-details.php" class="header_top_nav_ul_li_sub_each">
                                                         <h5 class="header_top_nav_ul_li_sub_each--title">Construction</h5>
                                                         <div class="header_top_nav_ul_li_sub_each--img">
                                                             <img src="<?php echo $imagesurl ?>header/products/3.jpg" class="img-fluid" alt="image">
@@ -50,7 +50,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="col-lg-3">
-                                                    <a href="<?php echo $siteurl ?>pages/product-listing.php" class="header_top_nav_ul_li_sub_each">
+                                                    <a href="<?php echo $siteurl ?>pages/product-details.php" class="header_top_nav_ul_li_sub_each">
                                                         <h5 class="header_top_nav_ul_li_sub_each--title">Mining</h5>
                                                         <div class="header_top_nav_ul_li_sub_each--img">
                                                             <img src="<?php echo $imagesurl ?>header/products/4.jpg" class="img-fluid" alt="image">
@@ -76,8 +76,8 @@
                                     </div>
                                     <!-- sub nav[end] -->
                                 </li>
-                                <li class="header_top_nav_ul_li"><a href="javascript:void(0)" class="header_top_nav_ul_li--a">Technology</a></li>
-                                <li class="header_top_nav_ul_li"><a href="javascript:void(0)" class="header_top_nav_ul_li--a">Tyre Care</a></li>
+                                <li class="header_top_nav_ul_li"><a href="<?php echo $siteurl ?>pages/technology.php" class="header_top_nav_ul_li--a">Technology</a></li>
+                                <li class="header_top_nav_ul_li"><a href="<?php echo $siteurl ?>pages/tyre-care.php" class="header_top_nav_ul_li--a">Tyre Care</a></li>
                                 <li class="header_top_nav_ul_li">
                                     <a href="javascript:void(0)" class="header_top_nav_ul_li--a has-drop"><span>About</span>
                                         <svg width="9.466" height="5.301" viewBox="0 0 9.466 5.301">
@@ -125,7 +125,7 @@
                                                     </a>
                                                 </div>
                                                 <div class="col-12 text-right">
-                                                    <a href="javascript:void(0)" class="header_top_nav_ul_li_sub--single">
+                                                    <a href="<?php echo $siteurl ?>pages/about.php" class="header_top_nav_ul_li_sub--single">
                                                         <span>All Details</span>
                                                         <svg width="12.298" height="10.078" viewBox="0 0 12.298 10.078">
                                                             <g transform="translate(12.888 -1.586) rotate(90)">
@@ -144,9 +144,9 @@
                                     </div>
                                     <!-- sub nav[end] -->
                                 </li>
-                                <li class="header_top_nav_ul_li"><a href="javascript:void(0)" class="header_top_nav_ul_li--a">Events</a></li>
-                                <li class="header_top_nav_ul_li"><a href="javascript:void(0)" class="header_top_nav_ul_li--a">Media</a></li>
-                                <li class="header_top_nav_ul_li"><a href="javascript:void(0)" class="header_top_nav_ul_li--a">Blog</a></li>
+                                <li class="header_top_nav_ul_li"><a href="<?php echo $siteurl ?>pages/events.php" class="header_top_nav_ul_li--a">Events</a></li>
+                                <li class="header_top_nav_ul_li"><a href="<?php echo $siteurl ?>pages/media.php" class="header_top_nav_ul_li--a">Media</a></li>
+                                <li class="header_top_nav_ul_li"><a href="<?php echo $siteurl ?>pages/blog.php" class="header_top_nav_ul_li--a">Blog</a></li>
                                 
                                 <li class="header_top_nav_ul_li">
                                     <a href="javascript:void(0)" class="header_top_nav_ul_li--a btn_search">
@@ -156,7 +156,7 @@
                                         <span>Search</span>
                                     </a>
                                 </li>
-                                <li class="header_top_nav_ul_li"><a href="javascript:void(0)" class="header_top_nav_ul_li--a btn_enquire">Enquiry</a></li>
+                                <li class="header_top_nav_ul_li"><a href="<?php echo $siteurl ?>pages/enquiry.php" class="header_top_nav_ul_li--a btn_enquire">Enquiry</a></li>
                             </ul>
                         </nav>
                     </div>

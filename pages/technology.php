@@ -13,20 +13,30 @@
     <?php include('../components/shared/header.php') ?> 
     <!-- website header[end] -->
     <main>
-        <!-- cremb and heading[start] -->
-        <div class="page_head">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="page_head_cremb">
-                            <a href="javascript:void(0)" class="page_head_cremb--link">Home</a>
-                            <a class="page_head_cremb--link">technology</a>
-                        </div>
-                        <h1 class="page_head--title">Technology</h1>
-                    </div>
+        <!-- cremb[start] -->
+        <?php include('../components/page-header-and-cremb-no-bg.php') ?>
+        <!-- cremb[end] -->
+        <!-- banner image type[start] -->
+        <div class="image_banner">
+            <video src="<?php echo $assetsurl ?>videos/dummy.mp4" autoplay muted loop>
+                Your browser does not support the video tag.
+            </video>
+            <div class="image_banner_btn">
+                <div class="container">
+                    <a href="javascript:void(0)" class="banner-video-btn v-pop" data-type="youtube" data-id="udnjPDsUBug">
+                        <svg width="55" height="55" viewBox="0 0 55 55" style="enable-background:new 0 0 55 55;">
+                            <g>
+                                <path fill="#076ED5" d="M27.5,0C42.7,0,55,12.3,55,27.5S42.7,55,27.5,55S0,42.7,0,27.5S12.3,0,27.5,0z"></path>
+                                <path fill="#F6FAFB" d="M25.1,20.1v14.4l8.5-7.2L25.1,20.1z"></path>
+                            </g>
+                        </svg>
+                        <span>Watch Video</span>
+                    </a>
                 </div>
             </div>
+            <!-- <img src="" data-m="<?php echo $imagesurl?>life/banner-mob.jpg" data-d="<?php echo $imagesurl?>life/banner.jpg" class="img-fluid w-100 multi-img" alt="banner"> -->
         </div>
+        <!-- banner image type[end] -->
         <!-- cremb and heading[end] -->
         <section class="prod_posts py-5">
             <div class="container">

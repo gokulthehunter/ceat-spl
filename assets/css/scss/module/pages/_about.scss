@@ -1,5 +1,18 @@
 .image_banner{margin-top:-87px;position: relative;
     &_inner{position: absolute;left:0;width: 100%;top:35%; transform: translateY(-50%);}
+    &_btn{position: absolute;left:0;width: 100%;bottom:20%;
+        .banner-video-btn{
+            svg{width: 50px;height: 50px;
+                @include media-xs-max(){width:35px;height:35px;}
+            }
+            span{color: #fff;font-weight: bold;font-size:1.2rem;margin-left:10px;
+                @include media-xs-max(){font-size:0.8rem;margin-left:5px;}
+            }
+        }
+        @include media-xs-max(){bottom:10%;}
+    }
+    video{width: 100%;}
+    @include media-xs-max(){margin-top:0;}
 }
 
 .about_info{
@@ -13,6 +26,9 @@
             }
             &:last-child{margin:0;} 
             @include media-xs-max(){font-size:0.9rem;display: inline-block;vertical-align: middle;padding-right:0;margin:0;margin-right:15px;}
+        }
+        &.no-lines{
+            .about_info_btns--each:after{display: none;}
         }
         @include media-xs-max(){overflow-x:auto;white-space: nowrap;-webkit-overflow-scrolling: touch;margin-bottom:20px;}
     }

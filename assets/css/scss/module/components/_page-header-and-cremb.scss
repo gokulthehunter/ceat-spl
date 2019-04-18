@@ -8,6 +8,8 @@
             &:hover{color: $color_main;}
         }
     }
-    &--title{font-weight: 600;color:#000;font-size: 28px;/* padding-top:10px; */margin-bottom:0;}
+    &--title{font-weight: 600;color:#000;font-size: 1.4rem;/* padding-top:10px; */margin-bottom:0;
+        @include media-xs-max(){font-size:1.1rem;}
+    }
     @include media-xs-max(){padding:25px 0;}
 }

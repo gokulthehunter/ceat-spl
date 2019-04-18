@@ -1,0 +1,15 @@
+.award_table{
+    table{background:#F4F6F8;width:100%;text-align:center;
+        thead{border-bottom:solid 1px #c9c9c9;
+            th{color:#555;font-size:0.9rem;padding:20px 10px;font-weight:normal;
+                &:first-child{width: 40%;text-align: left;padding:20px 30px;}
+            }
+        }
+        td{padding:20px 10px;
+            &:first-child{padding:20px 30px;font-size: 1.2rem;font-weight: 600;text-align: left;
+                @include media-xs-max(){font-size: 1rem;padding:10px;}
+            }
+            @include media-xs-max(){padding:10px;}
+        }
+    }
+}

@@ -324,9 +324,12 @@ jQuery(document).ready(function ($) {
   tabsAction(); //tab actions
   videoPopAction(); //video pop action
   getSetOffsets(); //getting and setting offsets
-  testiSlider(".testi_wrapper_slider",".testi_wrapper_thumbs") // test slider
+  testiSlider(".testi_wrapper_slider", ".testi_wrapper_thumbs") // test slider
+  jQuery(window).on("load", function ($) {
+    $(".site_loader").fadeOut();
+  }(jQuery))
 }(jQuery));
-$(window).on("resize",function () {
+jQuery(window).on("resize", function ($) {
   multiImg();
   getSetOffsets(); //getting and setting offsets
-})
+}(jQuery));
