@@ -2,7 +2,7 @@ header{height:125px;
     @include media-sm-max(){height:46px;}
     &.state-down{height:63px;
         .header{
-            &_top{}
+            // &_top{}
             &_down{transform: translateY(-62px);}
         }
     }
@@ -11,7 +11,7 @@ header{height:125px;
     &.state-down{height:63px;}
     &.menu-open{transform: translateX(-270px);}
     &_top{background: #fff;padding:8px 0;position:relative;z-index:1;
-        &--logo{display: block;max-width: 100px;
+        &--logo{display: block;max-width: 100px;opacity:0;
             @include media-sm-max(){width:64px;}
         }
         &_nav{
