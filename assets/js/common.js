@@ -313,6 +313,26 @@ function testiSlider(selmain,selthumb){
 
 };
 // testimonial slider[end]
+// input change in radios[start]
+function changeInputInRadios(){
+  $(document).delegate(".change-input input" ,"change",function(){
+    var _this = $(this),
+        _type = $(this).attr("data-type"),
+      _hideP = _this.parents(".change-input").next().find(".type-inputs").children(".c_field").hide(),
+        _actSel = _this.parents(".change-input").next().find(".type-inputs");
+    if (_type == "mobile"){
+      _hideP;
+      _actSel.find(".type-mobile").show();
+    } else if (_type == "email"){
+      _hideP;
+      _actSel.find(".type-email").show();
+    }else{
+      _hideP;
+      _actSel.find(".type-text").show();
+    };
+  })
+};
+// input change in radios[end]
 jQuery(document).ready(function ($) {
   multiImg(); // multi imaging for mobile and desk img
   selectfileCustom(); //custom select box
@@ -325,6 +345,7 @@ jQuery(document).ready(function ($) {
   videoPopAction(); //video pop action
   getSetOffsets(); //getting and setting offsets
   testiSlider(".testi_wrapper_slider", ".testi_wrapper_thumbs") // test slider
+  changeInputInRadios(); //input type change in radio change
   jQuery(window).on("load", function ($) {
     $(".site_loader").fadeOut();
   }(jQuery))

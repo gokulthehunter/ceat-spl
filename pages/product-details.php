@@ -62,29 +62,41 @@
                                 <h1 class="product_details_desc--title">Farmax 85</h1>
                                 <p class="product_details_desc--copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris augue nunc, scelerisque a hendrerit sed, faucibus rhoncus erat. Nunc aliquet, augue ut viverra tempus, massa nisi laoreet lacus, molestie faucibus felis nulla in mi. Aenean euismod sapien aliquam lacus accumsan, quis feugiat libero facilisis. Praesent quis posuere justo. Cras non urna euismod, fringilla orci a, aliquet turpis.</p>
                                 <form action="javascript:void(0)" class="product_details_desc_form">
-                                    <div class="product_details_desc_form--radios d-flex justify-content-between py-2">
+                                    <div class="change-input product_details_desc_form--radios d-flex justify-content-between py-2">
                                         <p>
-                                            <input value="1" type="radio" id="test1" name="prod-area-radio" checked>
+                                            <input data-type="mobile" value="1" type="radio" id="test1" name="prod-area-radio" checked>
                                             <label for="test1">Cal me back</label>
                                         </p>
                                         <p>
-                                            <input value="2" type="radio" id="test2" name="prod-area-radio">
+                                            <input data-type="email" value="2" type="radio" id="test2" name="prod-area-radio">
                                             <label for="test2">Get a quote</label>
                                         </p>
                                         <p>
-                                            <input value="3" type="radio" id="test3" name="prod-area-radio">
+                                            <input data-type="text" value="3" type="radio" id="test3" name="prod-area-radio">
                                             <label for="test3">download data sheet</label>
                                         </p>
                                     </div>
-                                    <div class="c_field with_country">
-                                        <select class="country-code-changer" id="prod-area-c-code">
-                                            <option selected value="+91" data-image="<?php echo $imagesurl ?>flags/in.svg">India <span>+91</span></option>
-                                            <option value="+22" data-image="<?php echo $imagesurl ?>flags/it.svg">Italy +22</option>
-                                            <option value="+23" data-image="<?php echo $imagesurl ?>flags/jp.svg">Japan +22</option>
-                                            <option value="+243" data-image="<?php echo $imagesurl ?>flags/sa.svg">Saudi Arabia +24</option>
-                                        </select>
-                                        <input type="text" id="prod-area-mob" class="c_field--input numeric-only" placeholder="Enter your Mobile Number">
-                                        <p class="c_field--error">This field is required</p>
+                                    <div> <!-- dont remove this empty div wrapper -->
+                                        <div class="type-inputs">
+                                            <div class="type-mobile c_field with_country">
+                                                <select class="country-code-changer" id="prod-area-c-code">
+                                                    <option selected value="+91" data-image="<?php echo $imagesurl ?>flags/in.svg">India <span>+91</span></option>
+                                                    <option value="+22" data-image="<?php echo $imagesurl ?>flags/it.svg">Italy +22</option>
+                                                    <option value="+23" data-image="<?php echo $imagesurl ?>flags/jp.svg">Japan +22</option>
+                                                    <option value="+243" data-image="<?php echo $imagesurl ?>flags/sa.svg">Saudi Arabia +24</option>
+                                                </select>
+                                                <input type="text" id="prod-area-mob" class="c_field--input numeric-only" placeholder="Enter your Mobile Number">
+                                                <p class="c_field--error">This field is required</p>
+                                            </div>
+                                            <div class="type-email c_field">
+                                                <input type="email" id="prod-area-email" class="c_field--input" placeholder="Enter your Email ID">
+                                                <p class="c_field--error">This field is required</p>
+                                            </div>
+                                            <div class="type-text c_field">
+                                                <input type="text" id="prod-area-text" class="c_field--input" placeholder="Enter your text">
+                                                <p class="c_field--error">This field is required</p>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="product_details_desc_form--spl">
