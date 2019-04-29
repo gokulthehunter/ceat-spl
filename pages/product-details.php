@@ -184,6 +184,46 @@
                 </div>
                 <div class="py-2 d-block d-sm-none"></div>
             </div>
+            <div class="prod_feat">
+                <div class="container bg-white p-0 position-relative">
+                    <div class="prod_feat_slider swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide prod_feat_slider_each">
+                                <img src="<?php echo $imagesurl ?>products/featured/slides/1.png" class="img-fluid" alt="Feature">
+                                <h5 class="prod_feat_slider_each--text">Feature one</h5>
+                            </div>
+                            <div class="swiper-slide prod_feat_slider_each">
+                                <img src="<?php echo $imagesurl ?>products/featured/slides/2.png" class="img-fluid" alt="Feature">
+                                <h5 class="prod_feat_slider_each--text">Feature two</h5>
+                            </div>
+                            <div class="swiper-slide prod_feat_slider_each">
+                                <img src="<?php echo $imagesurl ?>products/featured/slides/1.png" class="img-fluid" alt="Feature">
+                                <h5 class="prod_feat_slider_each--text">Feature three</h5>
+                            </div>
+                            <div class="swiper-slide prod_feat_slider_each">
+                                <img src="<?php echo $imagesurl ?>products/featured/slides/2.png" class="img-fluid" alt="Feature">
+                                <h5 class="prod_feat_slider_each--text">Feature four more content</h5>
+                            </div>
+                            <div class="swiper-slide prod_feat_slider_each">
+                                <img src="<?php echo $imagesurl ?>products/featured/slides/1.png" class="img-fluid" alt="Feature">
+                                <h5 class="prod_feat_slider_each--text">Feature five other data</h5>
+                            </div>
+                            <div class="swiper-slide prod_feat_slider_each">
+                                <img src="<?php echo $imagesurl ?>products/featured/slides/2.png" class="img-fluid" alt="Feature">
+                                <h5 class="prod_feat_slider_each--text">New Feature</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- arrows[start] -->
+                    <div class="prod_feat_slider--arrow feat-prev">
+                        <img src="<?php echo $imagesurl ?>arrow-long-left.svg" class="img-fluid" alt="arrow">
+                    </div>
+                    <div class="prod_feat_slider--arrow feat-next">
+                        <img src="<?php echo $imagesurl ?>arrow-long-right.svg" class="img-fluid" alt="arrow">
+                    </div>
+                    <!-- arrows[end] -->
+                </div>
+            </div>
         </section>
         <!-- product features[end] -->
         <!-- tyre table[start] -->

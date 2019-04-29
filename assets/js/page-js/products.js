@@ -7,10 +7,9 @@ function filterActions(){
         $(".product_filter_each select").niceSelect();
     });
 };
-function productSllider(){
-    var _sliderSel = '.product-slider';
-
-    var _init = new Swiper(_sliderSel,{
+function productSlider(){
+    var _sliderSel = '.product-slider',
+        _init = new Swiper(_sliderSel,{
         speed: 300,
         effect: 'fade',
         pagination: {
@@ -21,7 +20,35 @@ function productSllider(){
             nextEl: '.slide-next',
             prevEl: '.slide-prev',
         }
-    })
+    });
+
+    // feature slider[start]
+    var _sliderSelF = '.prod_feat_slider',
+        _initF = new Swiper(_sliderSelF, {
+            speed: 700,
+            slidesPerView: 4,
+            navigation: {
+                nextEl: '.feat-next',
+                prevEl: '.feat-prev'
+            },
+            breakpoints: {
+                991: {
+                    slidesPerView: 3
+                },
+                767: {
+                    slidesPerView: 1
+                },
+            },
+            on:{
+                transitionStart:function(){
+                    $(".prod_feat_slider_each").removeClass("no-l-border");
+                },
+                transitionEnd: function () {
+                    $(".prod_feat_slider_each").eq(this.activeIndex).addClass("no-l-border");
+                },
+            }
+        });
+    // feature slider[end]
 };
 function productPageForms(){
     // validator blue print
@@ -70,7 +97,7 @@ function loadTables(){
 }
 jQuery(document).ready(function(){
     filterActions();
-    productSllider();
+    productSlider();
     productPageForms();
     loadTables();
 })

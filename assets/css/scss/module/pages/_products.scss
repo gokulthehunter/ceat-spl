@@ -36,10 +36,10 @@
     &_imgs{padding-bottom:50px;}
     &_desc{
         &--title{font-size: 28px;font-weight: 600;
-            @include media-sm-max(){text-align: center;}
+            @include media-xs-max(){text-align: center;}
         }
         &--copy{font-size: 16px;font-weight: 400;color: #2E2E2E;padding-bottom:10px;
-            @include media-sm-max(){text-align: center;}
+            @include media-xs-max(){text-align: center;}
         }
         &_form{
             &--radios{
@@ -103,6 +103,33 @@
     }
 }
 // produt benefits[end]
+// product feature slides[start]
+.prod_feat{
+    &_slider{
+        &_each{padding:50px 40px;border:solid 1px #F4F6F8;border-bottom:none;border-right:none;text-align:center;height:unset;
+            img{max-width:130px;margin:auto;}
+            &:first-child,&.no-l-border{border-left: none;}
+            // &:last-child{border-right: solid 1px #c9c9c9;}
+            &--text{font-weight:600;color:#333;font-size:1.2rem;padding-top:50px;}
+        }
+        &--arrow{width: 46px;height: 46px;border-radius: 50%;border: solid 1px #000;padding: 8px 0;text-align: center;margin: 0 5px;cursor: pointer;outline: none;position:absolute;top:50%;z-index: 1;background:#fff;transform:translateY(-50%);@extend %transition;
+            &.feat{
+                &-prev{left:-30px;
+                    @include media-md-max(){left:-10px}
+                    @include media-xs-max(){left:10px;}
+                }
+                &-next{right:-30px;
+                    @include media-md-max(){right:-10px}
+                    @include media-xs-max(){right:10px;}
+                }
+            }
+            &.swiper-button-disabled{opacity: 0.2;cursor: default;}
+            &:hover:not(.swiper-button-disabled) {background: #f1f1f1;border-color: #f1f1f1;}
+            @include media-xs-max(){width: 35px;height:35px;padding:3px 0;}
+        }
+    }
+}
+// product feature slides[end]
 // tyre table[start]
 .tyre_table{
     &_select{

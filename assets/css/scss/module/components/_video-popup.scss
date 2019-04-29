@@ -1,7 +1,7 @@
 #v-popup-container {display:none;position: fixed;z-index: 996;width: 60%;left: 50%;margin-left: -30%;top: 20%;background-color: #fff;
     @include media-md-max(){width: 90%;margin-left:-45%;}
 }
-#v-popup-close {cursor: pointer;position: absolute;right: -25px;top: -25px;z-index: 998;width: 50px;height: 50px;text-align: center;font-size: 30px;background-color: $color_main;line-height: 48px;color: #fff;@extend %transition;
+#v-popup-close {cursor: pointer;position: absolute;right: -25px;top: -25px;z-index: 998;width: 50px;height: 50px;text-align: center;font-size: 30px;background-color: $color_main;line-height: 43px;color: #fff;@extend %transition;
     &:hover{color: #fff;background: $color_sub;}
     @include media-xs-max(){right: 0px;top: -50px;}
 }

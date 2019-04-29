@@ -56,9 +56,10 @@ button{outline: none;box-shadow: none;background: none;border:none;
         }
     }
     &_field{position: relative;padding-bottom:15px;
-        input,textarea,&--input,&--textarea{padding:15px 20px;font-size:14px;width:100%;border:solid 1px #DEE3E8;outline:none;border-radius:6px;resize: none;}
+        input,textarea,&--input,&--textarea{padding:15px 20px;font-size:0.9rem;width:100%;border:solid 1px #DEE3E8;outline:none;border-radius:6px;resize: none;}
+        input,textarea{max-width:100%;}
         textarea{vertical-align: bottom;}
-        &--error{color:$color_sub;font-size:12px;right:6px;bottom:14px;position: absolute;margin:0;display: none}
+        &--error,label.wpforms-error{color:$color_sub;font-size:0.8rem;right:6px;bottom:12px;position: absolute;margin:0;display: none}
         &.with_country{
             .c_field{
                 &--input{padding-left:115px;}
@@ -73,6 +74,9 @@ button{outline: none;box-shadow: none;background: none;border:none;
             }
         }
         &.type-select{width: 100%;display:flex;
+            .nice-select{font-size:0.9rem;width:100%;border-radius:6px;min-height:53px;padding-top:6px;background-color:none;
+                .list{width:100%;max-height:280px;overflow-y:auto;-webkit-overflow-scrolling: touch;}
+            }
             .c_field{
                 &--select{font-size:14px;width:100%;border-radius:6px;min-height:53px;padding-top:6px;background-color:none;
                     ul.list{width: 100%;}
@@ -80,14 +84,17 @@ button{outline: none;box-shadow: none;background: none;border:none;
             }
         }
         &.checktype{display: block;
-                input {padding: 0;height: initial;width: initial;margin-bottom: 0;display: none;cursor: pointer;
-                    &:checked + label:after {content: '';display: block;position: absolute;top: 6px;left: 9px;width: 7px;height: 12px;border: solid #000;border-width: 0 2px 2px 0;transform: rotate(45deg);}
-                }
-                label {position: relative;cursor: pointer;
-                    span{padding-left:35px;margin-top:-30px;display: inline-block;vertical-align: top;}
-                    &:before {content:'';appearance: none;background-color: transparent;border: 2px solid #000;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
-                        padding: 10px;display: inline-block;position: relative;vertical-align: middle;cursor: pointer;margin-right: 5px;border-radius: 7px;}
-                }
+            ul{padding:0;
+                // li{}
+            }
+            input {padding: 0;height: initial;width: initial;margin-bottom: 0;display: none !important;cursor: pointer;
+                &:checked + label:after {content: '';display: block;position: absolute;top: 6px;left: 9px;width: 7px;height: 12px;border: solid #000;border-width: 0 2px 2px 0;transform: rotate(45deg);}
+            }
+            label {position: relative;cursor: pointer;
+                span{padding-left:35px;margin-top:-30px;display: inline-block;vertical-align: top;}
+                &:before {content:'';appearance: none;background-color: transparent;border: 2px solid #000;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+                    padding: 10px;display: inline-block;position: relative;vertical-align: middle;cursor: pointer;margin-right: 5px;border-radius: 7px;}
+            }
         }
     }
     &_btn{

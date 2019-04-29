@@ -208,7 +208,8 @@ function selectfileCustom() {
     _seltextData = _seltext.text();
   _seltext.text(_seltextData.slice(0, 3));
   $(".country-selector").on("change", function () {
-    var _changeData = $(this).val();
+    // var _changeData = $(this).val();
+    var _changeData = $(this).find("option:selected").text();
     _seltext.text(_changeData.slice(0, 3))
   });
 
@@ -333,13 +334,41 @@ function changeInputInRadios(){
   })
 };
 // input change in radios[end]
+// img svg loader[start]
+function imgSvgConvert() {
+  /* Replace all SVG images with inline SVG*/
+  $('img.convert-svg').each(function () {
+    var $img = jQuery(this);
+    var imgID = $img.attr('id');
+    var imgClass = $img.attr('class');
+    var imgURL = $img.attr('src');
+
+    jQuery.get(imgURL, function (data) {
+      // Get the SVG tag, ignore the rest
+      var $svg = jQuery(data).find('svg');
+      // Add replaced image's ID to the new SVG
+      if (typeof imgID !== 'undefined') {
+        $svg = $svg.attr('id', imgID);
+      }
+      // Add replaced image's classes to the new SVG
+      if (typeof imgClass !== 'undefined') {
+        $svg = $svg.attr('class', imgClass + ' replaced-svg');
+      }
+      // Remove any invalid XML tags as per http://validator.w3.org
+      $svg = $svg.removeAttr('xmlns:a');
+      // Replace image with new SVG
+      $img.replaceWith($svg);
+    }, 'xml');
+  });
+};
+// img svg loader[end]
 jQuery(document).ready(function ($) {
   multiImg(); // multi imaging for mobile and desk img
   selectfileCustom(); //custom select box
   numericOnlyInput(); //making inputbox numeric only
   navAction(); //navigation actions
   formActions(); //form actions
-  //imgSvgConvert(); //custom img to svg loader
+  imgSvgConvert(); //custom img to svg loader
   docClicks(); //doc clicks
   tabsAction(); //tab actions
   videoPopAction(); //video pop action

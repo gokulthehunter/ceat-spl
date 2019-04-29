@@ -21,7 +21,7 @@
         .c{
             &_btn--inner{min-width: 100%;}
             &_field{position: relative;
-                &:before{content:'*';position: absolute;left:-20px;top:29%;color: #F45120;font-size:24px;line-height:24px;}
+                &:before{content:'*';position: absolute;left:-20px;top:50%;transform:translateY(-50%);color: #F45120;font-size:24px;line-height:24px;height: 17px;}
                 &.optional{
                     &:before{display: none;}
                 }
