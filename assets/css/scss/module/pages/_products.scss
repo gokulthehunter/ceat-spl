@@ -44,6 +44,12 @@
         &_form{
             &--radios{
                 @include radio-input();
+                .input_grps--btn{
+                    br{display: none;}
+                }
+                .QueryType{
+                    .wpcf7-list-item-label{line-height:initial !important;}
+                }
             }
             &--spl{color: $color_sub;
                 img{
@@ -51,6 +57,9 @@
                 }
                 span{display: inline-block;vertical-align: middle;font-weight: 600;
                     @include media-sm-max(){font-size:12px;}
+                }
+                &.wp-ajust{position: absolute;margin-top:-48px;
+                    @include media-xs-max(){margin-top:-64px;}
                 }
             }
         }
@@ -157,8 +166,19 @@
         }
     }
     table{width:100%;}
-    #table-holder{max-height:400px;overflow: auto;white-space: nowrap;cursor: all-scroll;-webkit-overflow-scroll:touch;
-        *{white-space: inherit;}
+    #table-holder{/* max-height:400px; */overflow: auto;white-space: nowrap;cursor: all-scroll;-webkit-overflow-scroll:touch;
+        p{margin:0;}
+        table{/* table-layout: fixed; */word-wrap: break-word;
+            
+            th,td{white-space: pre-wrap;word-wrap: break-word;padding:5px;}
+            th{border-width:1px;font-size: 0.8rem;font-weight:600;background: #f4f6f8;padding:2px 5px;}
+            td{font-size: 0.75rem;}
+            
+            &.head-table{border-bottom:#fff;}
+            &.res-table{}
+            @include media-lg-max(){min-width: 1100px;}
+        }
+        // *{white-space: inherit;}
         .table-loading{border:solid 1px #dee2e6;padding:30px;text-align:center;padding-top:60px;
             .c_btn_loader_loading{opacity: 1;margin-bottom:15px;}
         }
@@ -193,3 +213,53 @@
     @include media-md-max(){overflow-x:hidden;}
 }
 // tyre table[end]
+
+// expand table
+.expand_table{position:fixed;left:0;top:0;width:100%;height:100%;z-index:100;background:rgba(0,0,0,0.8);display:none;padding:50px;
+    &--close{position:absolute;right: 5px;top:5px;cursor: pointer;
+        svg{
+            path{@extend %transition;}
+        }
+        &:hover{
+            svg path{fill:#fff;}
+        }
+        // @include media-xs-max(){top:5px;}
+    }
+    &_inner{background:#fff;position: absolute;left: 40px;top:50%;transform:translateY(-60%);width: calc(100% - 80px);max-height: 100%;overflow: auto;margin-top:40px;padding-bottom:10px;
+        &::-webkit-scrollbar-track{background-color: #fff;border:none;}
+        &::-webkit-scrollbar{width: 6px; background-color: #fff;}
+        &::-webkit-scrollbar-thumb{ background-color: $color_main;border:none;}
+        &::-webkit-scrollbar-button{display: none;}
+        &::-webkit-scrollbar:horizontal{height:6px;}
+        table{
+            th,td{font-size:0.8rem;padding:5px;}
+            td{font-size:0.75rem;}
+        }
+        @include media-xs-max(){left:15px;width:calc(100% - 30px);/* top:40px;transform:none; */transform:translateY(-50%);padding-bottom:25px;}
+    }
+}
+// wp adjusted
+span.wpcf7-list-item{margin: 0 15px 0 0!important;
+    label{position:relative;
+        [type="radio"]:checked,[type="radio"]:not(:checked) {position: absolute;left: -9999px;}
+        [type="radio"]:checked + span,
+        [type="radio"]:not(:checked) + span{position: relative;padding-left: 28px;cursor: pointer;line-height: 20px;display: inline-block;color: #898989;font-size:14px;}
+        
+        [type="radio"]:checked + span:before,
+        [type="radio"]:not(:checked) + span:before {content: '';position: absolute;left: 0;top: 0;width: 21px;height: 21px;border: 1px solid #E8E8E8;border-radius: 100%;background: #F4F6F8;
+            @include media-xs-max(){top:4px;}
+        }
+        
+        [type="radio"]:checked + span:after,
+        [type="radio"]:not(:checked) + span:after {content: '';width:21px;height: 21px;background: url(#{$img_url}tick.svg)no-repeat center center / contain;position: absolute;top: 0px;left: 0px;border-radius: 100%;transition: all 0.2s ease;
+            @include media-xs-max(){top:4px;}
+        }
+        
+        [type="radio"]:not(:checked) + span:after {opacity: 0;transform: scale(0);}
+        
+        [type="radio"]:checked + span{color: #000;}
+        [type="radio"]:checked + span:after {opacity: 1;transform: scale(1);}
+    }
+}
+
+

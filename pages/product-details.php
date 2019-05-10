@@ -274,46 +274,62 @@
                     <div class="col-lg-11 mt-4 pr-lg-0">
                         <div class="wrap-scrolls">
                             <div class="" id="table-holder">
-                                <div class="table-loading">
+                                <!-- <div class="table-loading">
                                     <div class="c_btn_loader_loading">
                                         <div class="c_btn_loader_loading--item"></div>
                                         <div class="c_btn_loader_loading--item"></div>
                                         <div class="c_btn_loader_loading--item"></div>
                                     </div>
                                     <h4 class=" c_title--inner small">please Wait a second...</h4>
-                                </div>
+                                </div> -->
                                 <!-- appended tables -->
-                                <!-- <table class="table-bordered w-100 text-center">
+                                <table class="head-table table-bordered w-100 text-center">
                                     <tr>
-                                        <th rowspan="2">Machinery</th>
-                                        <th rowspan="2">Tech</th>
-                                        <th rowspan="2">Pattern<br/>Name</th>
-                                        <th rowspan="2">Size</th>
-                                        <th rowspan="2">LI/SS</th>
-                                        <th rowspan="2">Rim</th>
-                                        <th colspan="2"><div class="small-text">Unloaded Dimension</div></th>
-                                        <th rowspan="2">SLR<p>mm/in</p></th>
-                                        <th rowspan="2">RC<p>mm/in</p></th>
-                                        <th rowspan="2" class="by-split">NSD<p>mm</p><div class="small-text">32nds</div></th>
+                                        <th rowspan="2" width="100">Product</th>
+                                        <th rowspan="2" width="80">Product Code</th>
+                                        <th rowspan="2" width="70">Category</th>
+                                        <th rowspan="2" width="70">Macinery</th>
+                                        <th rowspan="2" width="95">Construction</th>
+                                        <th rowspan="2" width="60">Size</th>
+                                        <th rowspan="2" width="50">LI/SS</th>
+                                        <th rowspan="2" width="50">PR</th>
+                                        <th rowspan="2" width="60">Type</th>
+                                        <th rowspan="2" width="50">Rim</th>
+                                        <th colspan="2" width="120"><div class="small-text">Unloaded Dimension</div></th>
+                                        <th rowspan="2" width="60">SLR<p class="m-0">mm/in</p></th>
+                                        <th rowspan="2" width="60">RC<p  class="m-0">mm/in</p></th>
+                                        <th colspan="2" width="120"><div class="small-text">Infl.Press</div></th>
+                                        <th colspan="8" width="400"><div class="small-text">Speed Km/ph(Mph)</div></th>
                                     </tr>
+                                    <tr >
+                                        <th width="60">SW<p  class="m-0">mm/in</p></th>
+                                        <th width="60">OD<p  class="m-0">mm/in</p></th>
+                                        <!-- set 2 -->
+                                        <th width="60">Bar</th>
+                                        <th width="60">PSI</th>
+                                        <!-- set 3 -->
+                                    </tr>
+
                                     <tr>
-                                        <th>SW<p>mm/in</p></th>
-                                        <th>OD<p>mm/in</p></th>
+                                        <td  rowspan="2" width="100">1.0</td>
+                                        <td  rowspan="2" width="80">10.00</td>
+                                        <td  rowspan="2" width="70">40.00</td>
+                                        <td  rowspan="2" width="70">52.00</td>
+                                        <td  rowspan="2" width="95">con</td>
+                                        <td  rowspan="2" width="60">62</td>
+                                        <td  rowspan="2" width="50">1.0</td>
+                                        <td  rowspan="2" width="50">10.00</td>
+                                        <td  rowspan="2" width="60">40.00</td>
+                                        <td  rowspan="2" width="50">52.00</td>
+                                        <td  rowspan="1" width="60">40</td>
+                                        <td  rowspan="1" width="60">40</td>
+                                        <td  rowspan="2" width="60">40</td>
+                                        <td  rowspan="2" width="60">40</td>
+                                        <!-- inflpress -->
+                                        <td  rowspan="1" width="60">bar</td>
+                                        <td  rowspan="1" width="60">psi</td>
                                     </tr>
-                                    <tr>
-                                        <td>1.0</td>
-                                        <td>10.00</td>
-                                        <td>40.00</td>
-                                        <td>52.00</td>
-                                        <td>40</td>
-                                        <td>62</td>
-                                        <td>1.0</td>
-                                        <td>10.00</td>
-                                        <td>40.00</td>
-                                        <td>52.00</td>
-                                        <td>40</td>
-                                    </tr>
-                                </table> -->
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -354,6 +370,20 @@
     <!-- website footer[start] -->
     <?php include('../components/shared/footer.php') ?>
     <!-- website footer[end] -->
+
+    <!-- table expander[start] -->
+    <div class="expand_table">
+        <div class="expand_table--close">
+            <svg width="36.063" height="36.063" viewBox="0 0 36.063 36.063">
+                <path d="M27.15-16.2H16.6V-5.55H12.15V-16.2H1.65v-4.15h10.5v-10.7H16.6v10.7H27.15Z" transform="translate(-5.091 20.789) rotate(45)" fill="#dee3e8"/>
+            </svg>
+        </div>
+        <div class="expand_table_inner">
+            <h2>Table inner here</h2>
+            <!-- clone data here -->
+        </div>
+    </div>
+    <!-- table expander[end] -->
     <!-- scripts[start] -->
     <?php include('../includes/bottom-scripts.php') ?> 
     <!-- scripts[end] -->

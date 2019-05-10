@@ -11,6 +11,7 @@ button{outline: none;box-shadow: none;background: none;border:none;
     &-fluid{max-width: 100%;}
 }
 // nice select adjust
+select{display: none;}
 .nice-select{
     .current,.list li{
         img{display: none;}
@@ -96,8 +97,10 @@ button{outline: none;box-shadow: none;background: none;border:none;
                     padding: 10px;display: inline-block;position: relative;vertical-align: middle;cursor: pointer;margin-right: 5px;border-radius: 7px;}
             }
         }
+        &.no_star:before{display: none;}
     }
-    &_btn{
+    &_btn{position: relative;
+        .ajax-loader{position: absolute;right: 8px;top:20px;opacity: 0.7;}
         &--inner{color:$color_main;padding:15px 50px;border-radius: 6px;border:solid 1px $color_main;@extend %transition;min-width:200px;text-align:center;background:#fff;display: inline-block;box-shadow:none;text-transform:uppercase;font-weight:600;font-size:14px;
             &:hover{color: #fff;background: $color_main;}
             @include media-sm-max(){min-width:100px;}
@@ -225,4 +228,22 @@ button{outline: none;box-shadow: none;background: none;border:none;
     animation-fill-mode: both;
     &-1{@extend .fade_in;animation-delay:400ms;}
     &-2{@extend .fade_in;animation-delay:800ms;}
+}
+
+// pagining
+.wp_paging{
+    .page-numbers{border:solid 1px #e5e5e5;padding:5px 10px;color:$color_main;margin-right:5px;margin-bottom:5px;@extend %transition;
+        &:hover{background: #e5e5e5;}
+        &:last-child{margin-right:0;}
+        &.current{color:#fff;background:$color_main;}
+    }
+}
+.comment-form-cookies-consent{display: none !important;}
+.wpforms-confirmation-container{padding: 50px 20px;text-align: center;color: green;font-weight: bold;}
+.logged-in-as{
+    a{@extend %transition;
+        &:first-child{color:#999;}
+        &:last-child{color:$color_main;}
+        &:hover{color:$color_sub;}
+    }
 }

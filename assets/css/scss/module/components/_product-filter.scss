@@ -10,7 +10,7 @@
         label,p{display: block;color:#989898;font-size: 14px;}
         .nice-select{width:100%;border-color: #DEE3E8;
             .current{color: #000;}
-            .list{width: 100%;}
+            .list{width: 100%;max-height: 220px;overflow-y: auto;-webkit-overflow-scrolling: touch;}
             &:after{border-color: #000;}
         }
         p{margin:0;}

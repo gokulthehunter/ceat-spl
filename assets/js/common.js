@@ -58,35 +58,42 @@ function navAction() {
   });
 
   // header scroll action[start]
-  // var lastScrollTop = 0;
-  // $(window).on("scroll",function () {
-  //   var st = $(this).scrollTop();
-  //   if (st > lastScrollTop) {
-  //     // downscroll code
-  //     $("header").addClass("state-down");
-  //   } else {
-  //     // upscroll code
-  //     // $("header").removeClass("state-down");
-  //   }
-  //   lastScrollTop = st;
-  //});
-  $(window).on('mousewheel DOMMouseScroll', function (e) {
-    var direction = (function () {
-      var delta = (e.type === 'DOMMouseScroll' ?
-        e.originalEvent.detail * -40 :
-        e.originalEvent.wheelDelta);
-      return delta > 0 ? 0 : 1;
-    }());
-
-    if (direction === 1) {
-      // scroll down
-      $("header,.header").addClass("state-down");
-    }
-    if (direction === 0) {
-      // scroll up
-      $("header,.header").removeClass("state-down");
-    }
+  var lastScrollTop = 0;
+  $(window).on("scroll",function () {
+    var st = $(this).scrollTop();
+    if (st > lastScrollTop) {
+      // downscroll code
+        if(st > 125){
+          $("header,.header").addClass("state-down");
+        }
+      } else {
+        // upscroll code
+        $("header,.header").removeClass("state-down");
+      }
+    lastScrollTop = st;
   });
+  // $(window).on('mousewheel DOMMouseScroll wheel', function (e) {
+  //   if (desktop) {
+  //     var _pos = e.pageY || e.clientY;
+  //     var direction = (function () {
+  //       var delta = (e.type === 'DOMMouseScroll' ?
+  //         e.originalEvent.detail * -40 :
+  //         e.originalEvent.wheelDelta);
+  //       return delta > 0 ? 0 : 1;
+  //     }());
+
+  //     if (direction === 1) {
+  //       // scroll down
+  //       if (_pos > 250) {
+  //         $("header,.header").addClass("state-down");
+  //       }
+  //     }
+  //     if (direction === 0) {
+  //       // scroll up
+  //       $("header,.header").removeClass("state-down");
+  //     }
+  //   }
+  // });
   // header scroll action[end]
 };
 // nav action[end]

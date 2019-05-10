@@ -1,3 +1,4 @@
+<div class="mockhead"></div>
 <header>
     <div class="header">
         <div class="header_top">
@@ -177,7 +178,7 @@
         <div class="header_down">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-7">
+                    <div class="col-lg-6">
                         <form class="header_down_form d-md-flex align-items-center" action="javascript:void(0)">
                             <div class="header_down_form--select">
                                 <select>
@@ -221,7 +222,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-lg-5">
+                    <div class="col-lg-6">
                         <nav class="header_down_nav">
                             <ul class="header_down_nav_ul">
                                 <li class="header_down_nav_ul_li">

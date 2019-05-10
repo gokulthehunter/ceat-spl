@@ -12,5 +12,28 @@
             &:hover{background: $color_main;}
         }
     }
+    .input_grps{display: inline-block;vertical-align: middle;width: calc(100% - 210px);
+        &--mob,&--email{width:100%; }
+        &--btn{width: 206px;text-align: right;display: inline-block;vertical-align: middle;
+            @include media-xs-max(){width: 100%;display: block;margin-top:15px;}
+        }
+        @include media-xs-max(){width: 100%;display: block;}
+    }
+    .wpcf7-mail-sent-ok{position: static !important;}
     @include media-xs-max(){padding:0 15px;}
 }
+
+.wpcf7-form{position: relative;
+    .wpcf7-form-control-wrap{display: block;
+        .wpcf7-form-control{
+            .wpcf7-list-item {
+                .wpcf7-list-item-label{line-height: 28px;}
+            }
+            @include media-xs-max(){white-space: nowrap;overflow-x: auto;display: block;-webkit-overflow-scrolling: touch;}
+        }
+        .wpcf7-not-valid-tip{position: absolute;right: 5px;font-size: 0.8rem;bottom:-1px;}
+    }
+    .wpcf7-validation-errors{display: none !important;}
+    .wpcf7-mail-sent-ok{margin: 0;position: absolute;width: 100%;border: none;padding: 0;background: #025FBC;color: #fff;padding: 5px 10px;font-size: 0.9rem;text-align: center;border-radius: 5px;}
+}
+

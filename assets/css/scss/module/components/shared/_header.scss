@@ -1,16 +1,19 @@
-header{height:125px;
+.mockhead{height:125px;
     @include media-sm-max(){height:46px;}
-    &.state-down{height:63px;
+}
+header{/* height:125px; */ transition: all 300ms ease;backface-visibility: hidden;
+    // @include media-sm-max(){height:46px;}
+    &.state-down{/* height:63px; */
         .header{
             // &_top{}
             &_down{transform: translateY(-62px);}
         }
     }
 }
-.header{transition: all 300ms ease;position:fixed;left:0;top:0;height:125px;width:100%;z-index:100;
+.header{ transition: all 300ms ease;position:fixed;left:0;top:0;height:125px;width:100%;z-index:100;backface-visibility: hidden;
     &.state-down{height:63px;}
     &.menu-open{transform: translateX(-270px);}
-    &_top{background: #fff;padding:8px 0;position:relative;z-index:1;
+    &_top{background: #fff;padding:8px 0;position:relative;z-index:1;height:63px;
         &--logo{display: block;max-width: 100px;
             @include media-sm-max(){width:64px;}
         }
@@ -79,7 +82,7 @@ header{height:125px;
         }
         @include media-sm-max(){height:46px;border-bottom:solid 1px #f5f5f5;}
     }
-    &_down{background: $color_main;padding:10px 0;box-shadow: 0 -10px 8px 10px rgba(0,0,0,0.2);
+    &_down{background: $color_main;padding:10px 0;box-shadow: 0 -10px 8px 10px rgba(0,0,0,0.2);backface-visibility: hidden;
         &_form{
             &--select{border-right:solid 1px rgba(255,255,255,0.4);
                 .nice-select{background: #076ED5;border:none;border-radius:0;padding-right:45px;
@@ -89,10 +92,10 @@ header{height:125px;
                             @include media-sm-max(){max-width: 100%;}
                         }
                     }
-                    .list{
+                    .list{max-height:250px;overflow-y:auto;
                         @include media-sm-max(){width:100%;}
                     }
-                    &:after{border-color:#fff;}
+                    &:after{border-color:#fff;margin-top:-5px;right:18px;}
                     @include media-md-max(){padding-right: 30px;}
                     @include media-sm-max(){width: 100%;border-radius:5px;}
                 }
@@ -106,7 +109,7 @@ header{height:125px;
             }
             &--btn{
                 a{background: #fff;color:$color_main;padding: 10px 15px;border-radius: 0 5px 5px 0;font-weight:600;@extend %transition;cursor: pointer;margin-left:-1px;font-size:14px;min-height:42px;display: block;
-                    svg{margin-left:20px;@extend %transition;
+                    svg{margin-left:20px;@extend %transition;margin-top:-3px;
                         path{@extend %transition;fill:#076ED5;}
                         @include media-md-max(){margin-left:10px;}
                     }
@@ -129,7 +132,7 @@ header{height:125px;
                         .current{color: #fff;font-weight:600px;padding-left:28px;font-weight:600;text-transform:uppercase;
                             &:before{content:'';position: absolute;left:7px;top: 7px;background: url(#{$img_url}icon-globe.svg)no-repeat center center / contain;height:26px;width:26px;}
                         }
-                        &:after{border-color:#fff;}
+                        &:after{border-color:#fff;margin-top:-5px;right:18px;}
                         .list {left:inherit;right:0;
                             li{
                                 img{display: inline-block;width: 18px;vertical-align: middle;margin-right:8px;}
@@ -141,7 +144,7 @@ header{height:125px;
             }
             @include media-sm-max(){display: none;}
         }
-        @include media-sm-min(){transition:all 200ms ease;}
+        @include media-sm-min(){transition:all 300ms ease;}
         @include media-sm-max(){display: none;}
     }
     @include media-sm-max(){height:46px;}

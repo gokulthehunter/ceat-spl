@@ -84,20 +84,50 @@ function productPageForms(){
 }
 
 function loadTables(){
-    $.get("../assets/tables/floatmax.html", function (data) {
-        $("#table-holder").html(data);
+    // $.get("../assets/tables/floatmax.html", function (data) {
+    //     $("#table-holder").html(data);
         
-    }).done(function () {
-        var _container = $(".wrap-scrolls"),
-            _scroller = $("#table-holder");
+    // }).done(function () {
+    //     var _container = $(".wrap-scrolls"),
+    //         _scroller = $("#table-holder");
+    //     bindDragScroll(_container, _scroller);
+    //     $(".table-loading").fadeOut();
+    // });
+
+    var _container = $(".wrap-scrolls"),
+        _scroller = $("#table-holder");
+    bindDragScroll(_container, _scroller);
+    
+}
+function expandTable(){
+    $(document).on("click",".tyre_table--expand",function(e){
+        e.stopPropagation();
+        var _getTable = $("#table-holder table").clone(),
+            _container = $(".expand_table"),
+            _scroller = $(".expand_table_inner");
+
+        $("body").addClass("overflow-hidden");
+        $(".expand_table").fadeIn();
+        $(".expand_table_inner").html(_getTable);
+        // scroll trigger
         bindDragScroll(_container, _scroller);
-        $(".table-loading").fadeOut();
+    })
+    $(document).on("click", ".expand_table--close", function () {
+        $("body").removeClass("overflow-hidden");
+        $(".expand_table").fadeOut();
     });
     
+    $(document).on("click", ".expand_table_inner",function (e) {e.stopPropagation()});
+
+    $(document).on("click", function () {
+        $("body").removeClass("overflow-hidden");
+        $(".expand_table").fadeOut();
+    });
 }
 jQuery(document).ready(function(){
     filterActions();
     productSlider();
     productPageForms();
     loadTables();
+    expandTable();
 })
