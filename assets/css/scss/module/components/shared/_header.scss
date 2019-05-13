@@ -87,8 +87,8 @@ header{/* height:125px; */ transition: all 300ms ease;backface-visibility: hidde
             &--select{border-right:solid 1px rgba(255,255,255,0.4);
                 .nice-select{background: #076ED5;border:none;border-radius:0;padding-right:45px;
                     span{
-                        &.current{color: #fff;display:inline-block;max-width: 90px;overflow: hidden;text-overflow: ellipsis;
-                            @include media-md-max(){max-width: 65px;}
+                        &.current{color: #fff;display:inline-block;max-width: 65px;overflow: hidden;text-overflow: ellipsis;
+                            // @include media-md-max(){max-width: 65px;}
                             @include media-sm-max(){max-width: 100%;}
                         }
                     }

@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Events</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
     <?php include('../includes/header-imports.php') ?>
 </head>
 <body>
@@ -130,10 +131,12 @@
                                 <div class="col-12 pt-5">
                                     <div class="c_title">
                                         <h2 class="c_title--inner lined">2018</h2>
+                                        <h5 class="c_title--inner small pt-2">year subtitle</h5>
+                                        <p class="c_text--inner">small Discription lorem ipsum dolor amet lucasa imdum and erasdivora itablis navinatos.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="javascript:void(0)" class="events_data_past_each">
+                                    <a data-fancybox="event" href="<?php echo $imagesurl?>events/past/1.jpg" class="events_data_past_each">
                                         <div class="events_data_past_each--img">
                                             <img src="<?php echo $imagesurl?>events/past/1.jpg" class="img-fluid" alt="event poster">
                                         </div>
@@ -141,7 +144,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="javascript:void(0)" class="events_data_past_each">
+                                    <a data-fancybox="event" href="<?php echo $imagesurl?>events/past/2.jpg"  class="events_data_past_each">
                                         <div class="events_data_past_each--img">
                                             <img src="<?php echo $imagesurl?>events/past/2.jpg" class="img-fluid" alt="event poster">
                                         </div>
@@ -149,7 +152,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="javascript:void(0)" class="events_data_past_each">
+                                    <a data-fancybox="event" href="<?php echo $imagesurl?>events/past/3.jpg"  class="events_data_past_each">
                                         <div class="events_data_past_each--img">
                                             <img src="<?php echo $imagesurl?>events/past/3.jpg" class="img-fluid" alt="event poster">
                                         </div>
@@ -157,7 +160,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="javascript:void(0)" class="events_data_past_each">
+                                    <a data-fancybox="event" href="<?php echo $imagesurl?>events/past/4.jpg"  class="events_data_past_each">
                                         <div class="events_data_past_each--img">
                                             <img src="<?php echo $imagesurl?>events/past/4.jpg" class="img-fluid" alt="event poster">
                                         </div>
@@ -165,7 +168,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="javascript:void(0)" class="events_data_past_each">
+                                    <a data-fancybox="event" href="<?php echo $imagesurl?>events/past/5.jpg"  class="events_data_past_each">
                                         <div class="events_data_past_each--img">
                                             <img src="<?php echo $imagesurl?>events/past/5.jpg" class="img-fluid" alt="event poster">
                                         </div>
@@ -173,7 +176,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="javascript:void(0)" class="events_data_past_each">
+                                    <a data-fancybox="event" href="<?php echo $imagesurl?>events/past/6.jpg"  class="events_data_past_each">
                                         <div class="events_data_past_each--img">
                                             <img src="<?php echo $imagesurl?>events/past/6.jpg" class="img-fluid" alt="event poster">
                                         </div>
@@ -199,10 +202,12 @@
                                 <div class="col-12 pt-5">
                                     <div class="c_title">
                                         <h2 class="c_title--inner lined">2017</h2>
+                                        <h5 class="c_title--inner small pt-2">year subtitle</h5>
+                                        <p class="c_text--inner">small Discription lorem ipsum dolor amet lucasa imdum and erasdivora itablis navinatos.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="javascript:void(0)" class="events_data_past_each">
+                                    <a data-fancybox="event" href="<?php echo $imagesurl?>events/past/1.jpg" class="events_data_past_each">
                                         <div class="events_data_past_each--img">
                                             <img src="<?php echo $imagesurl?>events/past/1.jpg" class="img-fluid" alt="event poster">
                                         </div>
@@ -210,7 +215,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="javascript:void(0)" class="events_data_past_each">
+                                    <a data-fancybox="event" href="<?php echo $imagesurl?>events/past/2.jpg"  class="events_data_past_each">
                                         <div class="events_data_past_each--img">
                                             <img src="<?php echo $imagesurl?>events/past/2.jpg" class="img-fluid" alt="event poster">
                                         </div>
@@ -218,7 +223,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="javascript:void(0)" class="events_data_past_each">
+                                    <a data-fancybox="event" href="<?php echo $imagesurl?>events/past/3.jpg"  class="events_data_past_each">
                                         <div class="events_data_past_each--img">
                                             <img src="<?php echo $imagesurl?>events/past/3.jpg" class="img-fluid" alt="event poster">
                                         </div>
@@ -226,7 +231,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="javascript:void(0)" class="events_data_past_each">
+                                    <a data-fancybox="event" href="<?php echo $imagesurl?>events/past/4.jpg"  class="events_data_past_each">
                                         <div class="events_data_past_each--img">
                                             <img src="<?php echo $imagesurl?>events/past/4.jpg" class="img-fluid" alt="event poster">
                                         </div>
@@ -234,7 +239,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="javascript:void(0)" class="events_data_past_each">
+                                    <a data-fancybox="event" href="<?php echo $imagesurl?>events/past/5.jpg"  class="events_data_past_each">
                                         <div class="events_data_past_each--img">
                                             <img src="<?php echo $imagesurl?>events/past/5.jpg" class="img-fluid" alt="event poster">
                                         </div>
@@ -242,7 +247,7 @@
                                     </a>
                                 </div>
                                 <div class="col-md-4">
-                                    <a href="javascript:void(0)" class="events_data_past_each">
+                                    <a data-fancybox="event" href="<?php echo $imagesurl?>events/past/6.jpg"  class="events_data_past_each">
                                         <div class="events_data_past_each--img">
                                             <img src="<?php echo $imagesurl?>events/past/6.jpg" class="img-fluid" alt="event poster">
                                         </div>
@@ -285,6 +290,7 @@
     <?php include('../includes/bottom-scripts.php') ?> 
     <!-- scripts[end] -->
     <!-- page script -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
     <script>
         // loading mock
         $(".c_btn_loader--inner").on("click",function(){
