@@ -130,8 +130,8 @@
                             <div class="row">
                                 <div class="col-12 pt-5">
                                     <div class="c_title">
-                                        <h2 class="c_title--inner lined">2018</h2>
-                                        <h5 class="c_title--inner small pt-2">year subtitle</h5>
+                                        <h2 class="c_title--inner lined">2017</h2>
+                                        <h5 class="c_title--inner small pt-3">year subtitle</h5>
                                         <p class="c_text--inner">small Discription lorem ipsum dolor amet lucasa imdum and erasdivora itablis navinatos.</p>
                                     </div>
                                 </div>
@@ -202,7 +202,7 @@
                                 <div class="col-12 pt-5">
                                     <div class="c_title">
                                         <h2 class="c_title--inner lined">2017</h2>
-                                        <h5 class="c_title--inner small pt-2">year subtitle</h5>
+                                        <h5 class="c_title--inner small pt-3">year subtitle</h5>
                                         <p class="c_text--inner">small Discription lorem ipsum dolor amet lucasa imdum and erasdivora itablis navinatos.</p>
                                     </div>
                                 </div>
